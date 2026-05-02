@@ -1,0 +1,3081 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PERLE HOMME | كراء البذلات والبلدي المغربي</title>
+  <meta name="description" content="موقع فاخر لكراء البذلات الرسمية واللباس البلدي المغربي مع نافذة تفاصيل منبثقة وحجز عبر واتساب." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f8f2e8;
+      --surface: rgba(255,255,255,0.78);
+      --surface-strong: #fffaf1;
+      --card: #fffdf8;
+      --text: #1d1812;
+      --muted: #6f604f;
+      --line: rgba(98, 73, 33, 0.12);
+      --gold: #c99a2e;
+      --gold-strong: #a87911;
+      --gold-soft: #f3e2ab;
+      --yellow: #f5c400;
+      --black: #111111;
+      --white: #ffffff;
+      --shadow-sm: 0 8px 20px rgba(88, 62, 17, 0.08);
+      --shadow-md: 0 16px 40px rgba(74, 52, 15, 0.12);
+      --shadow-lg: 0 28px 70px rgba(31, 23, 13, 0.18);
+      --radius-sm: 16px;
+      --radius-md: 24px;
+      --radius-lg: 34px;
+      --container: 1180px;
+      --transition: 220ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Tajawal', sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(201,154,46,.15), transparent 22%),
+        radial-gradient(circle at bottom left, rgba(245,196,0,.08), transparent 24%),
+        linear-gradient(180deg, #fbf6ee 0%, #f5edde 100%);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .26;
+      background-image:
+        linear-gradient(45deg, rgba(201,154,46,.08) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(201,154,46,.08) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(201,154,46,.08) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(201,154,46,.08) 75%);
+      background-size: 34px 34px;
+      background-position: 0 0, 0 17px, 17px -17px, -17px 0px;
+      z-index: -1;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea, select { font: inherit; }
+    button { cursor: pointer; }
+    .container { width: min(var(--container), calc(100% - 28px)); margin: 0 auto; }
+    .section { padding: 86px 0; }
+    .section-head { margin-bottom: 28px; }
+    .section-head span {
+      display: inline-flex;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(201,154,46,.12);
+      color: var(--gold-strong);
+      font-weight: 800;
+      font-size: .85rem;
+      letter-spacing: .04em;
+    }
+    .section-head h2 {
+      margin: 12px 0 10px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: .98;
+    }
+    .section-head p { margin: 0; color: var(--muted); max-width: 70ch; }
+    .center { text-align: center; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      backdrop-filter: blur(14px);
+      background: rgba(248, 242, 232, 0.82);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 84px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+    .brand-logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #fff, #f0dfb2);
+      border: 1px solid rgba(201,154,46,.22);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .brand-logo img { width: 100%; height: 100%; object-fit: cover; }
+    .brand-text { display: grid; gap: 3px; }
+    .brand-text strong { font-size: 1.08rem; }
+    .brand-text small { color: var(--muted); font-size: .8rem; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 700;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      right: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--yellow));
+      transition: width var(--transition);
+    }
+    .nav-links a:hover::after { width: 100%; }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .icon-btn {
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.72);
+      border-radius: 14px;
+      box-shadow: var(--shadow-sm);
+      color: var(--text);
+    }
+    .menu-toggle { display: none; }
+    .mobile-menu {
+      display: none;
+      padding-bottom: 14px;
+      gap: 10px;
+      flex-direction: column;
+    }
+    .mobile-menu a {
+      background: rgba(255,255,255,.7);
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      font-weight: 700;
+    }
+
+    .btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: 800;
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), var(--yellow));
+      color: #1d1606;
+      box-shadow: var(--shadow-md);
+    }
+    .btn-secondary {
+      background: rgba(255,255,255,.75);
+      border: 1px solid var(--line);
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 56px 0 48px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 28px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-flex;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(201,154,46,.12);
+      color: var(--gold-strong);
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      margin: 0 0 16px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.2rem, 7vw, 6rem);
+      line-height: .92;
+      letter-spacing: -.03em;
+    }
+    .hero p {
+      margin: 0;
+      max-width: 60ch;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 28px 0;
+    }
+    .hero-features {
+      display: grid;
+      gap: 10px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .hero-features li::before {
+      content: "✦";
+      color: var(--gold-strong);
+      margin-left: 10px;
+    }
+
+    .hero-stage {
+      position: relative;
+      min-height: 560px;
+      border-radius: 36px;
+      background:
+        linear-gradient(155deg, rgba(255,255,255,.85), rgba(242,226,190,.88)),
+        linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.68));
+      border: 1px solid rgba(201,154,46,.14);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      padding: 26px;
+      isolation: isolate;
+    }
+    .hero-stage::before,
+    .hero-stage::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,154,46,.16), transparent 70%);
+      z-index: -1;
+    }
+    .hero-stage::before {
+      width: 340px;
+      height: 340px;
+      top: -90px;
+      left: -60px;
+    }
+    .hero-stage::after {
+      width: 260px;
+      height: 260px;
+      bottom: -70px;
+      right: -50px;
+    }
+    .hero-card {
+      position: absolute;
+      inset: 22px;
+      border-radius: 28px;
+      border: 1px solid rgba(201,154,46,.12);
+    }
+    .hero-main-image {
+      position: absolute;
+      inset: 78px 22% 36px 22%;
+      border-radius: 30px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(244,232,198,.92));
+      box-shadow: var(--shadow-md);
+    }
+    .hero-main-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .floating-chip {
+      position: absolute;
+      background: rgba(255,255,255,.74);
+      border: 1px solid rgba(201,154,46,.18);
+      backdrop-filter: blur(12px);
+      border-radius: 22px;
+      box-shadow: var(--shadow-sm);
+      padding: 16px 18px;
+      display: grid;
+      gap: 4px;
+      min-width: 110px;
+      text-align: center;
+    }
+    .floating-chip strong {
+      color: var(--gold-strong);
+      font-size: 2rem;
+      line-height: 1;
+    }
+    .floating-chip span { color: var(--muted); font-size: .92rem; }
+    .floating-chip.one { top: 36px; right: 24px; }
+    .floating-chip.two { top: 160px; left: 16px; }
+    .floating-chip.three { bottom: 30px; right: 36px; }
+
+    .collections-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+    .collection-card {
+      background: rgba(255,255,255,.72);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow-sm);
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+      min-height: 210px;
+    }
+    .collection-card::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      left: -60px;
+      bottom: -86px;
+      background: radial-gradient(circle, rgba(201,154,46,.12), transparent 70%);
+    }
+    .collection-icon {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: rgba(201,154,46,.12);
+      color: var(--gold-strong);
+      font-size: 1.15rem;
+      margin-bottom: 14px;
+    }
+    .collection-card h3 { margin: 0 0 8px; font-size: 1.2rem; }
+    .collection-card p { margin: 0; color: var(--muted); }
+    .collection-card.baladi-card {
+      background: linear-gradient(145deg, rgba(255,255,255,.9), rgba(247,233,173,.85));
+    }
+
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 26px;
+    }
+    .filter-btn {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.72);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 11px 18px;
+      font-weight: 800;
+      box-shadow: var(--shadow-sm);
+    }
+    .filter-btn.active {
+      background: linear-gradient(135deg, var(--gold), var(--yellow));
+      color: #1c1405;
+      border-color: transparent;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .product-card {
+      background: rgba(255,255,255,.78);
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+    .product-media {
+      position: relative;
+      height: 320px;
+      background: linear-gradient(160deg, rgba(255,255,255,.95), rgba(244,232,198,.9));
+      overflow: hidden;
+    }
+    .product-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .product-badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.82);
+      backdrop-filter: blur(10px);
+      color: var(--gold-strong);
+      font-weight: 800;
+      box-shadow: var(--shadow-sm);
+    }
+    .product-body {
+      padding: 22px;
+      display: grid;
+      gap: 12px;
+    }
+    .product-body h3 { margin: 0; font-size: 1.28rem; }
+    .product-body p { margin: 0; color: var(--muted); }
+    .product-meta {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .product-meta div {
+      background: rgba(255,255,255,.65);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 12px 14px;
+    }
+    .product-meta strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--gold-strong);
+      font-size: .86rem;
+    }
+    .card-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .card-actions .btn { flex: 1; padding: 12px 16px; }
+
+    .baladi-panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: center;
+      background: linear-gradient(145deg, rgba(255,255,255,.86), rgba(246,229,160,.72));
+      border: 1px solid rgba(201,154,46,.18);
+      box-shadow: var(--shadow-lg);
+      border-radius: 34px;
+      padding: 28px;
+      margin-top: 24px;
+    }
+    .baladi-panel-media {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .baladi-panel-media img {
+      height: 170px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 22px;
+      border: 1px solid rgba(201,154,46,.18);
+      box-shadow: var(--shadow-sm);
+    }
+    .baladi-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .baladi-stats div {
+      text-align: center;
+      padding: 16px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(201,154,46,.16);
+    }
+    .baladi-stats strong {
+      display: block;
+      font-size: 1.55rem;
+      color: var(--gold-strong);
+    }
+
+    .experience-grid,
+    .booking-grid {
+      display: grid;
+      grid-template-columns: .92fr 1.08fr;
+      gap: 26px;
+      align-items: start;
+    }
+    .experience-list,
+    .faq-list {
+      display: grid;
+      gap: 16px;
+    }
+    .exp-card,
+    details,
+    .booking-form {
+      background: rgba(255,255,255,.76);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+    .exp-card { padding: 22px; }
+    .exp-card h3 { margin: 0 0 8px; }
+    .exp-card p { margin: 0; color: var(--muted); }
+
+    .booking-form {
+      padding: 22px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+    .booking-form label { display: grid; gap: 8px; }
+    .booking-form span { font-weight: 800; }
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.9);
+      color: var(--text);
+      outline: none;
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+    .booking-form input:focus,
+    .booking-form select:focus,
+    .booking-form textarea:focus {
+      border-color: rgba(201,154,46,.45);
+      box-shadow: 0 0 0 4px rgba(201,154,46,.12);
+    }
+    .booking-form .full { grid-column: 1 / -1; }
+
+    details { padding: 18px 20px; }
+    details summary { cursor: pointer; font-weight: 800; }
+    details p { color: var(--muted); margin: 12px 0 0; }
+
+    .footer {
+      padding: 34px 0 78px;
+      border-top: 1px solid var(--line);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr 1fr;
+      gap: 18px;
+    }
+    .footer h3,
+    .footer h4 { margin-top: 0; }
+    .footer p,
+    .footer a { color: var(--muted); margin: 0 0 10px; display: block; }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 500;
+      padding: 14px;
+    }
+    .modal.open { display: flex; }
+    .modal-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(17, 14, 9, 0.68);
+      backdrop-filter: blur(10px);
+    }
+    .modal-dialog {
+      position: relative;
+      width: min(1100px, 100%);
+      max-height: 92vh;
+      overflow: auto;
+      background: #fffaf3;
+      border: 1px solid rgba(201,154,46,.15);
+      border-radius: 34px;
+      box-shadow: var(--shadow-lg);
+      padding: 24px;
+    }
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.9);
+      color: var(--text);
+      font-size: 1.5rem;
+      z-index: 3;
+    }
+    .modal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+    .modal-main-image {
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid rgba(201,154,46,.16);
+      background: linear-gradient(160deg, rgba(255,255,255,.95), rgba(244,232,198,.9));
+      box-shadow: var(--shadow-md);
+      min-height: 500px;
+    }
+    .modal-main-image img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+    .thumbs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .thumb {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.82);
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      padding: 0;
+    }
+    .thumb img {
+      width: 100%;
+      height: 92px;
+      object-fit: cover;
+      display: block;
+    }
+    .modal-tag {
+      display: inline-flex;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(201,154,46,.12);
+      color: var(--gold-strong);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .modal-content h3 {
+      margin: 0 0 10px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.35rem;
+      line-height: .98;
+    }
+    .modal-content p { margin: 0; color: var(--muted); }
+    .modal-meta {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 22px 0;
+    }
+    .modal-meta div {
+      background: rgba(255,255,255,.7);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 14px;
+    }
+    .modal-meta strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--gold-strong);
+      font-size: .88rem;
+    }
+    .modal-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .delay-1 { transition-delay: .08s; }
+    .delay-2 { transition-delay: .16s; }
+    .delay-3 { transition-delay: .24s; }
+    .delay-4 { transition-delay: .32s; }
+
+    @media (max-width: 1100px) {
+      .hero-grid,
+      .baladi-panel,
+      .experience-grid,
+      .booking-grid,
+      .modal-grid,
+      .footer-grid,
+      .collections-grid,
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+      .nav-links { display: none; }
+      .menu-toggle { display: inline-grid; place-items: center; }
+      .mobile-menu.show { display: flex; }
+    }
+
+    @media (max-width: 760px) {
+      .section { padding: 70px 0; }
+      .hero { padding-top: 36px; }
+      .hero-grid,
+      .baladi-panel,
+      .experience-grid,
+      .booking-grid,
+      .modal-grid,
+      .footer-grid,
+      .collections-grid,
+      .products-grid,
+      .booking-form,
+      .product-meta,
+      .modal-meta,
+      .baladi-stats { grid-template-columns: 1fr; }
+      .hero-stage { min-height: 460px; }
+      .hero-main-image { inset: 92px 12% 28px 12%; }
+      .floating-chip.one { top: 22px; right: 18px; }
+      .floating-chip.two { top: 138px; left: 16px; }
+      .floating-chip.three { bottom: 16px; right: 18px; }
+      .modal-main-image img { height: 320px; }
+      .thumbs { grid-template-columns: repeat(2, 1fr); }
+      .card-actions,
+      .hero-actions,
+      .modal-actions { flex-direction: column; }
+      .card-actions .btn,
+      .hero-actions .btn,
+      .modal-actions .btn { width: 100%; }
+      .brand-text small { display: none; }
+      .topbar-inner { min-height: 76px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; animation: none !important; }
+    }
+
+    /* === Enhanced Moroccan luxury refinements === */
+    :root {
+      --card-bg: #fbf7f0;
+      --card-bg-2: #f8f2e7;
+      --card-border: rgba(201,154,46,.18);
+      --heading-color: #533d25;
+      --body-color: #755d41;
+      --label-color: #b07a12;
+      --soft-btn-bg: #f8f6f1;
+      --soft-btn-text: #2f2418;
+      --topbar-bg: rgba(248, 242, 232, .96);
+      --icon-bg: rgba(255,255,255,.92);
+      --icon-color: #8b5a12;
+      --pattern-line: rgba(168,121,17,.16);
+      --pattern-dot: rgba(232,106,0,.12);
+      --pattern-dot-2: rgba(36,179,171,.08);
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      opacity: .20;
+      background-image:
+        linear-gradient(22.5deg, var(--pattern-line) 12%, transparent 12.5%, transparent 87%, var(--pattern-line) 87.5%, var(--pattern-line)),
+        linear-gradient(67.5deg, var(--pattern-line) 12%, transparent 12.5%, transparent 87%, var(--pattern-line) 87.5%, var(--pattern-line)),
+        linear-gradient(112.5deg, var(--pattern-line) 12%, transparent 12.5%, transparent 87%, var(--pattern-line) 87.5%, var(--pattern-line)),
+        linear-gradient(157.5deg, var(--pattern-line) 12%, transparent 12.5%, transparent 87%, var(--pattern-line) 87.5%, var(--pattern-line)),
+        radial-gradient(circle at center, var(--pattern-dot) 0 6px, transparent 7px),
+        radial-gradient(circle at center, var(--pattern-dot-2) 0 18px, transparent 19px);
+      background-size: 120px 120px;
+      background-position: 0 0, 0 0, 0 0, 0 0, 60px 60px, 60px 60px;
+    }
+
+    .topbar {
+      background: var(--topbar-bg);
+      border-bottom: 1px solid rgba(201,154,46,.14);
+    }
+
+    .brand-text strong {
+      font-size: 1.08rem;
+      color: #5a4630;
+    }
+
+    .brand-text small {
+      color: #8b7458;
+    }
+
+    .hero-perle {
+      color: #e86a00;
+    }
+
+    .icon-btn {
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba(201,154,46,.24);
+      background: var(--icon-bg);
+      border-radius: 16px;
+      box-shadow: 0 8px 18px rgba(88, 62, 17, 0.08);
+      color: var(--icon-color);
+      font-size: 1.05rem;
+    }
+
+    .mobile-menu a {
+      background: rgba(255,255,255,.9);
+      color: #5a4630;
+    }
+
+    .product-card,
+    .booking-card,
+    .detail-card,
+    .detail-box,
+    .detail-panel,
+    .spec-box,
+    .product-details,
+    .product-summary,
+    .modal-panel,
+    .modal-content,
+    .collection-card,
+    .experience-card,
+    .service-card,
+    .showcase-card,
+    .info-card,
+    .feature-card {
+      background: linear-gradient(180deg, var(--card-bg) 0%, var(--card-bg-2) 100%);
+      border: 1px solid var(--card-border);
+      box-shadow: 0 14px 30px rgba(34, 24, 12, 0.10);
+    }
+
+    .product-card h2,
+    .product-card h3,
+    .product-card h4,
+    .booking-card h2,
+    .booking-card h3,
+    .detail-card h2,
+    .detail-card h3,
+    .detail-box h3,
+    .detail-box h4,
+    .detail-panel h2,
+    .detail-panel h3,
+    .spec-box h3,
+    .spec-box h4,
+    .modal-panel h2,
+    .modal-panel h3,
+    .modal-content h2,
+    .modal-content h3,
+    .collection-card h3,
+    .experience-card h3,
+    .service-card h3,
+    .showcase-card h3,
+    .info-card h3,
+    .feature-card h3 {
+      color: var(--heading-color);
+    }
+
+    .product-card p,
+    .booking-card p,
+    .detail-card p,
+    .detail-box p,
+    .detail-panel p,
+    .spec-box p,
+    .spec-box div,
+    .modal-panel p,
+    .modal-content p,
+    .collection-card p,
+    .experience-card p,
+    .service-card p,
+    .showcase-card p,
+    .info-card p,
+    .feature-card p,
+    .product-copy,
+    .product-copy p,
+    .product-meta,
+    .product-summary,
+    .product-summary p,
+    .product-details,
+    .product-details p {
+      color: var(--body-color);
+    }
+
+    .product-badge,
+    .meta-label,
+    .detail-label,
+    .detail-title,
+    .spec-box strong,
+    .spec-box h4,
+    .product-card .product-meta strong,
+    .collection-card .icon-box,
+    .experience-card .icon-box,
+    .service-card .icon-box,
+    .showcase-card .icon-box,
+    .info-card .icon-box,
+    .feature-card .icon-box {
+      color: var(--label-color);
+    }
+
+    .product-badge,
+    .icon-box {
+      background: rgba(245, 222, 179, 0.45);
+      border: 1px solid rgba(201,154,46,.18);
+    }
+
+    .product-media {
+      background: linear-gradient(160deg, rgba(255,255,255,.98), rgba(244,232,198,.90));
+    }
+
+    .btn-outline,
+    .btn-secondary,
+    .btn-light,
+    .btn-ghost,
+    .btn-soft {
+      background: var(--soft-btn-bg);
+      color: var(--soft-btn-text);
+      border: 1px solid rgba(201,154,46,.18);
+    }
+
+    .product-actions .btn:last-child,
+    .modal-actions .btn:last-child,
+    .booking-actions .btn:last-child {
+      background: var(--soft-btn-bg);
+      color: var(--soft-btn-text);
+      border: 1px solid rgba(201,154,46,.18);
+    }
+
+    @media (max-width: 767px) {
+      .topbar {
+        background: rgba(248, 242, 232, .98);
+      }
+
+      .brand-text strong {
+        font-size: 1rem;
+      }
+
+      .icon-btn {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+
+    /* === Final premium upgrades === */
+    .whatsapp-float {
+      position: fixed;
+      left: 16px;
+      bottom: 16px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #25D366;
+      color: #fff;
+      box-shadow: 0 16px 32px rgba(37,211,102,.35);
+      z-index: 300;
+      font-size: 1.5rem;
+      border: 3px solid rgba(255,255,255,.75);
+    }
+    .trust-grid,
+    .reviews-grid,
+    .policy-grid,
+    .availability-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .trust-card,
+    .review-card,
+    .policy-card,
+    .availability-card {
+      background: linear-gradient(180deg, var(--card-bg) 0%, var(--card-bg-2) 100%);
+      border: 1px solid var(--card-border);
+      border-radius: 30px;
+      padding: 26px;
+      box-shadow: var(--shadow-md);
+    }
+    .trust-card h3,
+    .review-card h3,
+    .policy-card h3,
+    .availability-card h3 { color: var(--heading-color); margin-top: 0; }
+    .trust-card p,
+    .review-card p,
+    .policy-card p,
+    .availability-card p,
+    .review-stars { color: var(--body-color); }
+    .review-stars { font-size: 1.05rem; letter-spacing: 1px; }
+    .policy-card ul,
+    .availability-card ul { margin: 10px 0 0; padding-right: 18px; color: var(--body-color); }
+    .policy-card li,
+    .availability-card li { margin-bottom: 8px; }
+    .product-card { position: relative; }
+    .product-card .product-copy,
+    .product-card .product-meta,
+    .product-card .product-actions { position: relative; z-index: 2; }
+    .product-card .availability-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(37, 211, 102, 0.12);
+      color: #1c8d46;
+      font-weight: 800;
+      font-size: .86rem;
+      margin: 8px 0 2px;
+    }
+    .product-card .sizes-chip {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .product-card .sizes-chip span,
+    .modal-size-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 46px;
+      height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(201,154,46,.18);
+      background: rgba(255,255,255,.84);
+      color: var(--heading-color);
+      font-weight: 800;
+    }
+    .modal-size-btn.active {
+      background: linear-gradient(135deg, var(--gold), var(--yellow));
+      color: #1b150f;
+      border-color: transparent;
+    }
+    .modal-availability-box,
+    .modal-policy-box,
+    .modal-sizes-box {
+      background: rgba(255,255,255,.58);
+      border: 1px solid var(--card-border);
+      border-radius: 22px;
+      padding: 18px;
+      margin-top: 14px;
+    }
+    .modal-sizes-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .section-note {
+      color: var(--body-color);
+      max-width: 760px;
+      margin: 10px auto 0;
+      text-align: center;
+    }
+    .baladi-card,
+    #baladi .product-card,
+    #baladi .collection-card,
+    #baladi .info-card {
+      background: linear-gradient(180deg, rgba(255,251,242,.97) 0%, rgba(245,236,207,.94) 100%);
+      border: 1px solid rgba(201,154,46,.22);
+    }
+    #baladi h2,
+    #baladi h3,
+    #baladi h4 { color: #5a401c; }
+    #baladi p,
+    #baladi li,
+    #baladi .product-copy,
+    #baladi .product-summary { color: #7a5a2b; }
+    @media (max-width: 900px) {
+      .trust-grid,
+      .reviews-grid,
+      .policy-grid,
+      .availability-grid { grid-template-columns: 1fr; }
+    }
+
+
+    :root {
+      --hero-title-color: #111111;
+    }
+
+    .hero-elegance {
+      color: #e86a00;
+    }
+
+    .hero-title-black {
+      color: var(--hero-title-color);
+    }
+
+    body {
+      padding-bottom: 130px;
+    }
+
+    .booking-float {
+      position: fixed;
+      right: 16px;
+      bottom: 86px;
+      width: 74px;
+      height: 74px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      background: linear-gradient(135deg, #f5c400, #e0ab3f);
+      color: #111111;
+      font-weight: 800;
+      line-height: 1.02;
+      box-shadow: 0 18px 34px rgba(224,171,63,.34);
+      border: 3px solid rgba(255,255,255,.82);
+      z-index: 320;
+      text-align: center;
+    }
+
+    .booking-float span {
+      display: block;
+      font-size: .92rem;
+    }
+
+    .whatsapp-float {
+      left: 16px;
+      bottom: 86px;
+      width: 54px;
+      height: 54px;
+      z-index: 319;
+    }
+
+    .baladi-highlight,
+    #baladi .product-card,
+    #baladi .collection-card,
+    #baladi .info-card {
+      background: linear-gradient(180deg, rgba(255,248,234,.98) 0%, rgba(244,229,184,.96) 100%) !important;
+      border: 1px solid rgba(201,154,46,.24) !important;
+      box-shadow: 0 16px 34px rgba(41, 28, 12, 0.14) !important;
+    }
+
+    .baladi-highlight h2,
+    .baladi-highlight h3,
+    .baladi-highlight h4,
+    .baladi-highlight strong,
+    #baladi h2,
+    #baladi h3,
+    #baladi h4 {
+      color: #5a401c !important;
+    }
+
+    .baladi-highlight p,
+    .baladi-highlight li,
+    .baladi-highlight span,
+    #baladi p,
+    #baladi li,
+    #baladi .product-copy,
+    #baladi .product-summary {
+      color: #7a5a2b !important;
+    }
+
+    .baladi-highlight .icon-box,
+    .baladi-highlight .product-badge {
+      color: #b07a12 !important;
+      background: rgba(255,255,255,.52) !important;
+    }
+
+    @media (max-width: 767px) {
+      body {
+        padding-bottom: 160px;
+      }
+
+      .booking-float {
+        width: 70px;
+        height: 70px;
+        right: 14px;
+        bottom: 94px;
+      }
+
+      .whatsapp-float {
+        left: 14px;
+        bottom: 94px;
+        width: 52px;
+        height: 52px;
+      }
+
+      .hero-stage {
+        min-height: 430px;
+        padding: 16px;
+        border-radius: 28px;
+      }
+
+      .hero-card {
+        inset: 14px;
+        border-radius: 22px;
+      }
+
+      .hero-main-image {
+        display: block;
+        inset: 86px 14% 28px 14%;
+        border-radius: 24px;
+      }
+
+      .hero-stage::before {
+        width: 220px;
+        height: 220px;
+        top: -70px;
+        left: -50px;
+      }
+
+      .hero-stage::after {
+        width: 180px;
+        height: 180px;
+        bottom: -50px;
+        right: -35px;
+      }
+
+      .floating-chip {
+        position: absolute;
+        min-width: 98px;
+        padding: 12px 14px;
+        border-radius: 18px;
+      }
+
+      .floating-chip strong {
+        font-size: 1.55rem;
+      }
+
+      .floating-chip span {
+        font-size: .85rem;
+      }
+
+      .floating-chip.one {
+        top: 18px;
+        right: 12px;
+      }
+
+      .floating-chip.two {
+        top: 150px;
+        left: 8px;
+      }
+
+      .floating-chip.three {
+        bottom: 18px;
+        right: 12px;
+      }
+    }
+
+
+    :root {
+      --card-text-strong: #2a1f12;
+      --card-text: #6f604f;
+      --field-bg: rgba(255,255,255,.84);
+      --field-text: #4c3a25;
+      --field-label: #b07a12;
+      --field-border: rgba(201,154,46,.16);
+      --modal-surface: #fffaf3;
+      --modal-text: #5a4732;
+      --modal-strong: #2c2115;
+      --chip-bg-strong: rgba(255,255,255,.86);
+      --chip-text-strong: #3f2f1d;
+    }
+
+    .product-body h3,
+    .product-card h3,
+    .product-card h4,
+    .product-card .title,
+    .modal-dialog h2,
+    .modal-dialog h3,
+    .modal-dialog h4,
+    .modal-dialog strong,
+    .modal-dialog b,
+    .detail-title,
+    .detail-label {
+      color: var(--card-text-strong) !important;
+    }
+
+    .product-body p,
+    .product-card p,
+    .product-card li,
+    .product-card span,
+    .product-card .product-copy,
+    .product-card .product-summary,
+    .product-card .product-details,
+    .product-card .availability-chip,
+    .product-card .sizes-chip,
+    .modal-dialog,
+    .modal-dialog p,
+    .modal-dialog li,
+    .modal-dialog span,
+    .modal-dialog small,
+    .modal-dialog .meta-value,
+    .modal-dialog .meta-text,
+    .modal-availability-box p,
+    .modal-policy-box p,
+    .modal-sizes-box p {
+      color: var(--card-text) !important;
+    }
+
+    .product-meta,
+    .product-meta div,
+    .modal-availability-box,
+    .modal-policy-box,
+    .modal-sizes-box,
+    .modal-close,
+    .sizes-chip span,
+    .modal-size-btn,
+    .filter-btn,
+    .chip,
+    .chip-btn,
+    .category-chip,
+    .tab-btn {
+      background: var(--field-bg) !important;
+      color: var(--field-text) !important;
+      border-color: var(--field-border) !important;
+    }
+
+    .product-meta strong,
+    .meta-label,
+    .detail-label,
+    .modal-availability-box strong,
+    .modal-policy-box strong,
+    .modal-sizes-box strong,
+    .product-badge,
+    .availability-chip,
+    .sizes-chip span {
+      color: var(--field-label) !important;
+    }
+
+    .modal-dialog {
+      background: linear-gradient(180deg, var(--modal-surface) 0%, var(--card-bg-2) 100%) !important;
+      color: var(--modal-text) !important;
+    }
+
+    .modal-main-image,
+    .product-media {
+      background: linear-gradient(160deg, rgba(255,255,255,.98), rgba(244,232,198,.90));
+    }
+
+    .card-actions .btn-secondary,
+    .card-actions .btn-light,
+    .card-actions .btn-ghost,
+    .product-actions .btn:last-child,
+    .modal-actions .btn:last-child,
+    .booking-actions .btn:last-child {
+      background: var(--field-bg) !important;
+      color: var(--field-text) !important;
+      border: 1px solid var(--field-border) !important;
+    }
+
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#top">
+        <span class="brand-logo">
+          <img src="assets/logo.jpg" alt="شعار PERLE HOMME" onerror="this.onerror=null;this.src='assets/logo.jpg'">
+        </span>
+        <span class="brand-text">
+          <strong>PERLE HOMME</strong>
+          <small>كراء البذلات والبلدي المغربي الفاخر</small>
+        </span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#collections">المجموعات</a>
+        <a href="#products">المنتجات</a>
+        <a href="#baladi">البلدي</a>
+        <a href="#booking">الحجز</a>
+        <a href="#faq">الأسئلة</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeBtn" type="button" aria-label="تبديل الألوان">☾</button>
+        <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="فتح القائمة">☰</button>
+        
+      </div>
+    </div>
+    <div class="container mobile-menu" id="mobileMenu">
+      <a href="#collections">المجموعات</a>
+      <a href="#products">المنتجات</a>
+      <a href="#baladi"><span style="color:#b07a12">قسم البلدي المميز</span></a>
+      <a href="#booking">الحجز</a>
+      <a href="#faq">الأسئلة الشائعة</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <span class="eyebrow">أناقة مغربية فاخرة للأعراس والمناسبات</span>
+          <h1><span class="hero-perle">PERLE</span> HOMME<br><span class="hero-elegance">الأناقة</span> <span class="hero-title-black">عنوان</span></h1>
+          <p>
+            نبذة عن محل <strong>PERLE HOMME</strong>: محل متخصص في كراء البذلات الراقية للأعراس والمناسبات،
+            مع تشكيلة للكبار والأطفال وقسم بلدي مغربي بلمسة فاخرة وأناقة تناسب مختلف الأذواق.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#products">شاهد الموديلات</a>
+            <a class="btn btn-secondary" href="#baladi">اكتشف قسم البلدي</a>
+          </div>
+
+        </div>
+
+        <div class="hero-stage reveal delay-1">
+          <div class="hero-card"></div>
+          <div class="hero-main-image">
+            <img src="assets/hero-main.jpg" alt="واجهة فاخرة لمنتجات PERLE HOMME" onerror="this.onerror=null;this.src='assets/logo.jpg'">
+          </div>
+          <div class="floating-chip one"><strong>40</strong><span>بذلة كبار</span></div>
+          <div class="floating-chip two"><strong>20</strong><span>بذلة أطفال</span></div>
+          <div class="floating-chip three"><strong>15</strong><span>موديلات بلدي</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="collections">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span>المجموعات</span>
+          <h2>اختيارات مصممة لتبهر من أول نظرة</h2>
+          <p>كل قسم عنده هوية واضحة حتى يوصل الزبون بسرعة إلى ما يناسبه.</p>
+        </div>
+
+        <div class="collections-grid">
+          <article class="collection-card reveal delay-1">
+            <div class="collection-icon">✦</div>
+            <h3>بذلات الكبار</h3>
+            <p>40 موديل للكبار بمقاسات من 40 إلى 62 للأعراس والخطوبة والسهرات.</p>
+          </article>
+          <article class="collection-card reveal delay-2">
+            <div class="collection-icon">✦</div>
+            <h3>بذلات الأطفال</h3>
+            <p>20 موديل للأطفال بإطلالات مرتبة ومريحة من سنة إلى 11 سنة.</p>
+          </article>
+          <article class="collection-card reveal delay-3">
+            <div class="collection-icon">✦</div>
+            <h3>الأحذية والقمصان</h3>
+            <p>تكملة أنيقة للمظهر النهائي بقياسات واسعة وموديلات رسمية.</p>
+          </article>
+          <article class="collection-card baladi-card reveal delay-4">
+            <div class="collection-icon">✦</div>
+            <h3>قسم البلدي</h3>
+            <p>15 موديل بلدي فاخر بالأبيض والذهبي الملكي والأصفر الفاقع مع قياسات من S إلى XXXL.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="products">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span>المعرض الرئيسي</span>
+          <h2>كل فئة ببطاقات راقية وحركة ناعمة</h2>
+          <p>اضغط على أي موديل لفتح التفاصيل والصور الأخرى الخاصة به.</p>
+        </div>
+
+        <div class="filter-bar reveal delay-1">
+          <button class="filter-btn active" data-filter="all" type="button">الكل</button>
+          <button class="filter-btn" data-filter="adult" type="button">الكبار</button>
+          <button class="filter-btn" data-filter="kid" type="button">الأطفال</button>
+          <button class="filter-btn" data-filter="shoe" type="button">الأحذية</button>
+          <button class="filter-btn" data-filter="shirt" type="button">القمصان</button>
+          <button class="filter-btn" data-filter="baladi" type="button">البلدي</button>
+        </div>
+
+        <div class="products-grid" id="productsGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="baladi">
+      <div class="container">
+        <div class="baladi-panel reveal">
+          <div>
+            <div class="section-head">
+              <span>قسم البلدي</span>
+              <h2>فخامة مغربية بالأبيض والذهب الملكي</h2>
+              <p>
+                القسم البلدي مخصص للموديلات التقليدية المغربية، وكل موديل مجهز داخل الكود بصور متعددة
+                وقياسات من S إلى XXXL حتى تظهر التفاصيل في البوابة المنبثقة بشكل احترافي.
+              </p>
+            </div>
+            <div class="baladi-stats">
+              <div><strong>15</strong><span>موديلات</span></div>
+              <div><strong>6</strong><span>قياسات لكل موديل</span></div>
+              <div><strong>4</strong><span>صور داخل التفاصيل</span></div>
+            </div>
+          </div>
+          <div class="baladi-panel-media">
+            <img src="assets/baladi-1-front.jpg" alt="بلدي مغربي من الأمام" onerror="this.onerror=null;this.src='assets/logo.jpg'">
+            <img src="assets/baladi-1-side.jpg" alt="بلدي مغربي من الجانب" onerror="this.onerror=null;this.src='assets/logo.jpg'">
+            <img src="assets/baladi-1-back.jpg" alt="بلدي مغربي من الخلف" onerror="this.onerror=null;this.src='assets/logo.jpg'">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="booking">
+      <div class="container booking-grid">
+        <div class="section-head reveal">
+          <span>الحجز</span>
+          <h2>أرسل طلبك بسرعة وأناقة</h2>
+          <p>املأ المعلومات الأساسية، وسيتم تكوين رسالة واتساب جاهزة تتضمن الموديل والمقاس وتاريخ المناسبة.</p>
+        </div>
+
+        <form class="booking-form reveal delay-1" id="bookingForm">
+          <label>
+            <span>الاسم الكامل</span>
+            <input type="text" id="name" placeholder="مثال: محمد أمين" required>
+          </label>
+          <label>
+            <span>رقم الهاتف</span>
+            <input type="tel" id="phone" placeholder="06XXXXXXXX" required>
+          </label>
+          <label>
+            <span>نوع الطلب</span>
+            <select id="requestType" required>
+              <option value="">اختر</option>
+              <option>بذلة كبار</option>
+              <option>بذلة أطفال</option>
+              <option>حذاء</option>
+              <option>قميص</option>
+              <option>بلدي</option>
+            </select>
+          </label>
+          <label>
+            <span>اسم الموديل</span>
+            <input type="text" id="model" placeholder="مثال: بلدي ملكي 01" required>
+          </label>
+          <label>
+            <span>المقاس</span>
+            <input type="text" id="size" placeholder="مثال: XL أو 46" required>
+          </label>
+          <label>
+            <span>تاريخ المناسبة</span>
+            <input type="date" id="date" required>
+          </label>
+          <label class="full">
+            <span>ملاحظات إضافية</span>
+            <textarea id="notes" rows="4" placeholder="اكتب أي تفاصيل إضافية هنا"></textarea>
+          </label>
+          <button class="btn btn-primary full" type="submit">إرسال طلب الحجز</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span>الأسئلة الشائعة</span>
+          <h2>كل ما يحتاجه الزبون قبل الحجز</h2>
+        </div>
+        <div class="faq-list reveal delay-1">
+          <details>
+            <summary>هل يمكن تغيير الصور لاحقًا؟</summary>
+            <p>نعم، فقط استبدل صور assets بنفس الأسماء أو بدّل المسارات داخل الكود.</p>
+          </details>
+          <details>
+            <summary>هل النافذة المنبثقة جاهزة؟</summary>
+            <p>نعم، وهي تعرض صورة كبيرة وصورًا إضافية ومعلومات الموديل عند الضغط على زر عرض التفاصيل.</p>
+          </details>
+          <details>
+            <summary>هل الحجز يشتغل عبر واتساب؟</summary>
+            <p>نعم، فقط بدّل رقم الواتساب داخل الكود إلى رقمك الحقيقي بصيغة دولية بدون +.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>PERLE HOMME</h3>
+        <p>كراء البذلات الرسمية والبلدي المغربي الفاخر للأعراس والمناسبات.</p>
+      </div>
+      <div>
+        <h4>روابط سريعة</h4>
+        <a href="#products">المنتجات</a>
+        <a href="#baladi">البلدي</a>
+        <a href="#booking">الحجز</a>
+        <a href="https://www.instagram.com/perle_homme?igsh=MXFwN2x0Z3JlMDhqaw==" target="_blank" rel="noopener noreferrer">Instagram | @perle_homme</a>
+      </div>
+      <div>
+        <h4>مهم</h4>
+        <p>هذا الملف يعتمد على وجود الصور داخل مجلد assets بنفس الأسماء المذكورة داخل الكود.</p>
+      </div>
+    </div>
+  
+
+  <section class="section" id="trust">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">الثقة</span>
+        <h2>حجز واضح وثقة أكبر</h2>
+        <p>أضفنا معلومات أساسية تساعد الزبون على الاختيار بسرعة وتقلل التردد قبل الحجز.</p>
+      </div>
+      <div class="trust-grid">
+        <article class="trust-card">
+          <h3>كيف يتم الحجز</h3>
+          <p>1) تختار الموديل، 2) تختار المقاس، 3) تحدد تاريخ المناسبة، 4) تتوصل بتأكيد عبر واتساب أو الهاتف.</p>
+        </article>
+        <article class="trust-card">
+          <h3>تأكيد التوفر</h3>
+          <p>كل موديل عنده حالة توفر تقريبية، ومع التأكيد النهائي يتم تثبيت التاريخ لتفادي أي تداخل في الحجوزات.</p>
+        </article>
+        <article class="trust-card">
+          <h3>خدمة سريعة</h3>
+          <p>تم تجهيز الموقع ليكون واضحًا وسهلًا على الهاتف مع أزرار مباشرة للحجز، واتساب، وقراءة التفاصيل.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="availability-calendar">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">التوفر</span>
+        <h2>تقويم التوفر للموديلات</h2>
+        <p>هذا التقويم الأولي يساعد الزبون على معرفة الحالة الحالية قبل تأكيد الحجز النهائي.</p>
+      </div>
+      <div class="availability-grid">
+        <article class="availability-card">
+          <h3>بدلات الكبار</h3>
+          <ul>
+            <li>الأسبوع الحالي: متوفر جزئيًا.</li>
+            <li>نهاية الأسبوع: ضغط مرتفع، يُفضل الحجز المبكر.</li>
+            <li>المواسم والأعراس: التأكيد النهائي عبر واتساب.</li>
+          </ul>
+        </article>
+        <article class="availability-card">
+          <h3>بدلات الأطفال</h3>
+          <ul>
+            <li>التوفر جيد في معظم الأيام.</li>
+            <li>المقاسات الصغيرة تُحجز سريعًا.</li>
+            <li>يمكن التأكيد حسب العمر والمقاس.</li>
+          </ul>
+        </article>
+        <article class="availability-card">
+          <h3>قسم البلدي</h3>
+          <ul>
+            <li>التوفر حسب الموديل والتطريز.</li>
+            <li>يُفضل الحجز المبكر للألوان المميزة.</li>
+            <li>المعاينة أو التأكيد عبر واتساب متاحة.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="rental-policy">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">السياسة</span>
+        <h2>سياسة الكراء</h2>
+        <p>قواعد واضحة تساعد على حماية المحل وتوضيح الخدمة للزبون من البداية.</p>
+      </div>
+      <div class="policy-grid">
+        <article class="policy-card">
+          <h3>العربون</h3>
+          <ul>
+            <li>يمكن تثبيت الحجز بعربون مسبق.</li>
+            <li>يتم احتساب العربون ضمن المبلغ الإجمالي عند الاستلام.</li>
+            <li>في المواسم يُفضل الدفع المبكر لتأكيد الموعد.</li>
+          </ul>
+        </article>
+        <article class="policy-card">
+          <h3>مدة الكراء</h3>
+          <ul>
+            <li>المدة الأساسية حسب الاتفاق مع المحل.</li>
+            <li>أي تأخير في الإرجاع يجب إبلاغه مسبقًا.</li>
+            <li>بعض الموديلات الخاصة تحتاج توقيتًا أدق.</li>
+          </ul>
+        </article>
+        <article class="policy-card">
+          <h3>الحالة والعناية</h3>
+          <ul>
+            <li>يُرجى الحفاظ على الموديل في حالته الجيدة.</li>
+            <li>أي تلف واضح قد يترتب عليه تعويض حسب الحالة.</li>
+            <li>التنظيف والمتابعة يتمان وفق شروط المحل.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">آراء الزبناء</span>
+        <h2>تجارب وتقييمات</h2>
+        <p>قسم مخصص لبناء الثقة وإظهار جودة الخدمة بشكل مباشر.</p>
+      </div>
+      <div class="reviews-grid">
+        <article class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <h3>أناقة وخدمة ممتازة</h3>
+          <p>الموديل كان مطابقًا للصور، والمقاس مناسب، والحجز كان سريعًا وواضحًا.</p>
+          <strong>زبون من طنجة</strong>
+        </article>
+        <article class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <h3>قسم البلدي رائع</h3>
+          <p>الألوان راقية والتفاصيل أنيقة، وتم التأكيد معي عبر واتساب بسهولة.</p>
+          <strong>زبون مناسبة عائلية</strong>
+        </article>
+        <article class="review-card">
+          <div class="review-stars">★★★★☆</div>
+          <h3>حجز سهل من الهاتف</h3>
+          <p>أكثر شيء أعجبني هو وضوح البطاقات والتفاصيل وسرعة التواصل بعد إرسال الطلب.</p>
+          <strong>زبون من المدينة</strong>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  </footer>
+
+  <div class="modal" id="productModal" aria-hidden="true">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" type="button" aria-label="إغلاق">×</button>
+      <div class="modal-grid">
+        <div>
+          <div class="modal-main-image">
+            <img id="modalMainImage" src="assets/logo.jpg" alt="تفاصيل الموديل" onerror="this.onerror=null;this.src='assets/logo.jpg'">
+          </div>
+          <div class="thumbs" id="modalThumbs"></div>
+        </div>
+        <div class="modal-content">
+          <span class="modal-tag" id="modalTag"></span>
+          <h3 id="modalTitle"></h3>
+          <p id="modalDesc"></p>
+          <div class="modal-meta">
+            <div><strong>المقاسات</strong><span id="modalSizes"></span></div>
+            <div><strong>الألوان</strong><span id="modalColors"></span></div>
+            <div><strong>المناسبة</strong><span id="modalOccasion"></span></div>
+            <div><strong>الحالة</strong><span id="modalStatus"></span></div>
+          </div>
+          <div class="modal-actions">
+            <button class="btn btn-primary" id="bookThisModel" type="button">احجز هذا الموديل</button>
+            <button class="btn btn-secondary" id="modalCloseAlt" type="button">إغلاق</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <a class="booking-float" href="#booking" aria-label="احجز الآن">
+    <span>احجز</span>
+    <span>الآن</span>
+  </a>
+  <a class="whatsapp-float" href="https://wa.me/212700469429?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%AD%D9%88%D9%84%20%D8%A7%D9%84%D8%AD%D8%AC%D8%B2" target="_blank" rel="noopener noreferrer" aria-label="واتساب">✆</a>
+
+  <script>
+    const products = [
+      {
+        id: 'adult-1',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 01',
+        desc: 'موديل رسمي بخطوط نظيفة ووقفة فاخرة يناسب الأعراس والمناسبات الرسمية.',
+        sizes: '40 - 62',
+        colors: 'أسود / أوف وايت / كحلي',
+        occasion: 'أعراس ومناسبات رسمية',
+        status: 'متوفر',
+        mainImage: 'assets/adult-1.jpg',
+        gallery: ['assets/adult-1.jpg','assets/adult-1-side.jpg','assets/adult-1-back.jpg','assets/adult-1-detail.jpg']
+      },
+      {
+        id: 'adult-2',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 02',
+        desc: 'تصميم كلاسيكي يمنح حضورًا أنيقًا ومتوازنًا في المناسبات الكبيرة.',
+        sizes: '40 - 62',
+        colors: 'أسود / رمادي داكن',
+        occasion: 'أعراس وخطوبة',
+        status: 'متوفر',
+        mainImage: 'assets/adult-2.jpg',
+        gallery: ['assets/adult-2.jpg','assets/adult-2-side.jpg','assets/adult-2-back.jpg','assets/adult-2-detail.jpg']
+      },
+      {
+        id: 'adult-3',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 03',
+        desc: 'موديل أكثر جرأة بلمسة شبابية راقية للسهرات الراقية والأفراح.',
+        sizes: '40 - 62',
+        colors: 'كحلي / أسود',
+        occasion: 'سهرات وأفراح',
+        status: 'حسب الموعد',
+        mainImage: 'assets/adult-3.jpg',
+        gallery: ['assets/adult-3.jpg','assets/adult-3-side.jpg','assets/adult-3-back.jpg','assets/adult-3-detail.jpg']
+      },
+      {
+        id: 'adult-4',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 04',
+        desc: 'قصة متناسقة تعطي مظهرًا راقيًا ومهيبًا في الصور والاستقبال.',
+        sizes: '40 - 62',
+        colors: 'سكري / أسود',
+        occasion: 'استقبال رسمي',
+        status: 'متوفر',
+        mainImage: 'assets/adult-4.jpg',
+        gallery: ['assets/adult-4.jpg','assets/adult-4-side.jpg','assets/adult-4-back.jpg','assets/adult-4-detail.jpg']
+      },
+      {
+        id: 'adult-5',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 05',
+        desc: 'بدلة مناسبة لحفلات الزفاف والخطوبة مع لمسة فخامة واضحة.',
+        sizes: '40 - 62',
+        colors: 'أسود / أوف وايت / كحلي',
+        occasion: 'أعراس ومناسبات رسمية',
+        status: 'متوفر',
+        mainImage: 'assets/adult-5.jpg',
+        gallery: ['assets/adult-5.jpg','assets/adult-5-side.jpg','assets/adult-5-back.jpg','assets/adult-5-detail.jpg']
+      },
+      {
+        id: 'adult-6',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 06',
+        desc: 'خياطة أنيقة ومظهر رسمي يبرز الوقار والتميز في المناسبات.',
+        sizes: '40 - 62',
+        colors: 'أسود / رمادي داكن',
+        occasion: 'أعراس وخطوبة',
+        status: 'حسب الموعد',
+        mainImage: 'assets/adult-6.jpg',
+        gallery: ['assets/adult-6.jpg','assets/adult-6-side.jpg','assets/adult-6-back.jpg','assets/adult-6-detail.jpg']
+      },
+      {
+        id: 'adult-7',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 07',
+        desc: 'موديل فاخر لمحبي الإطلالات الكلاسيكية النظيفة.',
+        sizes: '40 - 62',
+        colors: 'كحلي / أسود',
+        occasion: 'سهرات وأفراح',
+        status: 'متوفر',
+        mainImage: 'assets/adult-7.jpg',
+        gallery: ['assets/adult-7.jpg','assets/adult-7-side.jpg','assets/adult-7-back.jpg','assets/adult-7-detail.jpg']
+      },
+      {
+        id: 'adult-8',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 08',
+        desc: 'إطلالة رسمية جذابة بتفاصيل محسوبة ولمسة مغربية راقية.',
+        sizes: '40 - 62',
+        colors: 'سكري / أسود',
+        occasion: 'استقبال رسمي',
+        status: 'متوفر',
+        mainImage: 'assets/adult-8.jpg',
+        gallery: ['assets/adult-8.jpg','assets/adult-8-side.jpg','assets/adult-8-back.jpg','assets/adult-8-detail.jpg']
+      },
+      {
+        id: 'adult-9',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 09',
+        desc: 'موديل رسمي بخطوط نظيفة ووقفة فاخرة يناسب الأعراس والمناسبات الرسمية.',
+        sizes: '40 - 62',
+        colors: 'أسود / أوف وايت / كحلي',
+        occasion: 'أعراس ومناسبات رسمية',
+        status: 'حسب الموعد',
+        mainImage: 'assets/adult-9.jpg',
+        gallery: ['assets/adult-9.jpg','assets/adult-9-side.jpg','assets/adult-9-back.jpg','assets/adult-9-detail.jpg']
+      },
+      {
+        id: 'adult-10',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 10',
+        desc: 'تصميم كلاسيكي يمنح حضورًا أنيقًا ومتوازنًا في المناسبات الكبيرة.',
+        sizes: '40 - 62',
+        colors: 'أسود / رمادي داكن',
+        occasion: 'أعراس وخطوبة',
+        status: 'متوفر',
+        mainImage: 'assets/adult-10.jpg',
+        gallery: ['assets/adult-10.jpg','assets/adult-10-side.jpg','assets/adult-10-back.jpg','assets/adult-10-detail.jpg']
+      },
+      {
+        id: 'adult-11',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 11',
+        desc: 'موديل أكثر جرأة بلمسة شبابية راقية للسهرات الراقية والأفراح.',
+        sizes: '40 - 62',
+        colors: 'كحلي / أسود',
+        occasion: 'سهرات وأفراح',
+        status: 'متوفر',
+        mainImage: 'assets/adult-11.jpg',
+        gallery: ['assets/adult-11.jpg','assets/adult-11-side.jpg','assets/adult-11-back.jpg','assets/adult-11-detail.jpg']
+      },
+      {
+        id: 'adult-12',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 12',
+        desc: 'قصة متناسقة تعطي مظهرًا راقيًا ومهيبًا في الصور والاستقبال.',
+        sizes: '40 - 62',
+        colors: 'سكري / أسود',
+        occasion: 'استقبال رسمي',
+        status: 'حسب الموعد',
+        mainImage: 'assets/adult-12.jpg',
+        gallery: ['assets/adult-12.jpg','assets/adult-12-side.jpg','assets/adult-12-back.jpg','assets/adult-12-detail.jpg']
+      },
+      {
+        id: 'adult-13',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 13',
+        desc: 'بدلة مناسبة لحفلات الزفاف والخطوبة مع لمسة فخامة واضحة.',
+        sizes: '40 - 62',
+        colors: 'أسود / أوف وايت / كحلي',
+        occasion: 'أعراس ومناسبات رسمية',
+        status: 'متوفر',
+        mainImage: 'assets/adult-13.jpg',
+        gallery: ['assets/adult-13.jpg','assets/adult-13-side.jpg','assets/adult-13-back.jpg','assets/adult-13-detail.jpg']
+      },
+      {
+        id: 'adult-14',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 14',
+        desc: 'خياطة أنيقة ومظهر رسمي يبرز الوقار والتميز في المناسبات.',
+        sizes: '40 - 62',
+        colors: 'أسود / رمادي داكن',
+        occasion: 'أعراس وخطوبة',
+        status: 'متوفر',
+        mainImage: 'assets/adult-14.jpg',
+        gallery: ['assets/adult-14.jpg','assets/adult-14-side.jpg','assets/adult-14-back.jpg','assets/adult-14-detail.jpg']
+      },
+      {
+        id: 'adult-15',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 15',
+        desc: 'موديل فاخر لمحبي الإطلالات الكلاسيكية النظيفة.',
+        sizes: '40 - 62',
+        colors: 'كحلي / أسود',
+        occasion: 'سهرات وأفراح',
+        status: 'حسب الموعد',
+        mainImage: 'assets/adult-15.jpg',
+        gallery: ['assets/adult-15.jpg','assets/adult-15-side.jpg','assets/adult-15-back.jpg','assets/adult-15-detail.jpg']
+      },
+      {
+        id: 'adult-16',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 16',
+        desc: 'إطلالة رسمية جذابة بتفاصيل محسوبة ولمسة مغربية راقية.',
+        sizes: '40 - 62',
+        colors: 'سكري / أسود',
+        occasion: 'استقبال رسمي',
+        status: 'متوفر',
+        mainImage: 'assets/adult-16.jpg',
+        gallery: ['assets/adult-16.jpg','assets/adult-16-side.jpg','assets/adult-16-back.jpg','assets/adult-16-detail.jpg']
+      },
+      {
+        id: 'adult-17',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 17',
+        desc: 'موديل رسمي بخطوط نظيفة ووقفة فاخرة يناسب الأعراس والمناسبات الرسمية.',
+        sizes: '40 - 62',
+        colors: 'أسود / أوف وايت / كحلي',
+        occasion: 'أعراس ومناسبات رسمية',
+        status: 'متوفر',
+        mainImage: 'assets/adult-17.jpg',
+        gallery: ['assets/adult-17.jpg','assets/adult-17-side.jpg','assets/adult-17-back.jpg','assets/adult-17-detail.jpg']
+      },
+      {
+        id: 'adult-18',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 18',
+        desc: 'تصميم كلاسيكي يمنح حضورًا أنيقًا ومتوازنًا في المناسبات الكبيرة.',
+        sizes: '40 - 62',
+        colors: 'أسود / رمادي داكن',
+        occasion: 'أعراس وخطوبة',
+        status: 'حسب الموعد',
+        mainImage: 'assets/adult-18.jpg',
+        gallery: ['assets/adult-18.jpg','assets/adult-18-side.jpg','assets/adult-18-back.jpg','assets/adult-18-detail.jpg']
+      },
+      {
+        id: 'adult-19',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 19',
+        desc: 'موديل أكثر جرأة بلمسة شبابية راقية للسهرات الراقية والأفراح.',
+        sizes: '40 - 62',
+        colors: 'كحلي / أسود',
+        occasion: 'سهرات وأفراح',
+        status: 'متوفر',
+        mainImage: 'assets/adult-19.jpg',
+        gallery: ['assets/adult-19.jpg','assets/adult-19-side.jpg','assets/adult-19-back.jpg','assets/adult-19-detail.jpg']
+      },
+      {
+        id: 'adult-20',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 20',
+        desc: 'قصة متناسقة تعطي مظهرًا راقيًا ومهيبًا في الصور والاستقبال.',
+        sizes: '40 - 62',
+        colors: 'سكري / أسود',
+        occasion: 'استقبال رسمي',
+        status: 'متوفر',
+        mainImage: 'assets/adult-20.jpg',
+        gallery: ['assets/adult-20.jpg','assets/adult-20-side.jpg','assets/adult-20-back.jpg','assets/adult-20-detail.jpg']
+      },
+      {
+        id: 'adult-21',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 21',
+        desc: 'بدلة مناسبة لحفلات الزفاف والخطوبة مع لمسة فخامة واضحة.',
+        sizes: '40 - 62',
+        colors: 'أسود / أوف وايت / كحلي',
+        occasion: 'أعراس ومناسبات رسمية',
+        status: 'حسب الموعد',
+        mainImage: 'assets/adult-21.jpg',
+        gallery: ['assets/adult-21.jpg','assets/adult-21-side.jpg','assets/adult-21-back.jpg','assets/adult-21-detail.jpg']
+      },
+      {
+        id: 'adult-22',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 22',
+        desc: 'خياطة أنيقة ومظهر رسمي يبرز الوقار والتميز في المناسبات.',
+        sizes: '40 - 62',
+        colors: 'أسود / رمادي داكن',
+        occasion: 'أعراس وخطوبة',
+        status: 'متوفر',
+        mainImage: 'assets/adult-22.jpg',
+        gallery: ['assets/adult-22.jpg','assets/adult-22-side.jpg','assets/adult-22-back.jpg','assets/adult-22-detail.jpg']
+      },
+      {
+        id: 'adult-23',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 23',
+        desc: 'موديل فاخر لمحبي الإطلالات الكلاسيكية النظيفة.',
+        sizes: '40 - 62',
+        colors: 'كحلي / أسود',
+        occasion: 'سهرات وأفراح',
+        status: 'متوفر',
+        mainImage: 'assets/adult-23.jpg',
+        gallery: ['assets/adult-23.jpg','assets/adult-23-side.jpg','assets/adult-23-back.jpg','assets/adult-23-detail.jpg']
+      },
+      {
+        id: 'adult-24',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 24',
+        desc: 'إطلالة رسمية جذابة بتفاصيل محسوبة ولمسة مغربية راقية.',
+        sizes: '40 - 62',
+        colors: 'سكري / أسود',
+        occasion: 'استقبال رسمي',
+        status: 'حسب الموعد',
+        mainImage: 'assets/adult-24.jpg',
+        gallery: ['assets/adult-24.jpg','assets/adult-24-side.jpg','assets/adult-24-back.jpg','assets/adult-24-detail.jpg']
+      },
+      {
+        id: 'adult-25',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 25',
+        desc: 'موديل رسمي بخطوط نظيفة ووقفة فاخرة يناسب الأعراس والمناسبات الرسمية.',
+        sizes: '40 - 62',
+        colors: 'أسود / أوف وايت / كحلي',
+        occasion: 'أعراس ومناسبات رسمية',
+        status: 'متوفر',
+        mainImage: 'assets/adult-25.jpg',
+        gallery: ['assets/adult-25.jpg','assets/adult-25-side.jpg','assets/adult-25-back.jpg','assets/adult-25-detail.jpg']
+      },
+      {
+        id: 'adult-26',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 26',
+        desc: 'تصميم كلاسيكي يمنح حضورًا أنيقًا ومتوازنًا في المناسبات الكبيرة.',
+        sizes: '40 - 62',
+        colors: 'أسود / رمادي داكن',
+        occasion: 'أعراس وخطوبة',
+        status: 'متوفر',
+        mainImage: 'assets/adult-26.jpg',
+        gallery: ['assets/adult-26.jpg','assets/adult-26-side.jpg','assets/adult-26-back.jpg','assets/adult-26-detail.jpg']
+      },
+      {
+        id: 'adult-27',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 27',
+        desc: 'موديل أكثر جرأة بلمسة شبابية راقية للسهرات الراقية والأفراح.',
+        sizes: '40 - 62',
+        colors: 'كحلي / أسود',
+        occasion: 'سهرات وأفراح',
+        status: 'حسب الموعد',
+        mainImage: 'assets/adult-27.jpg',
+        gallery: ['assets/adult-27.jpg','assets/adult-27-side.jpg','assets/adult-27-back.jpg','assets/adult-27-detail.jpg']
+      },
+      {
+        id: 'adult-28',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 28',
+        desc: 'قصة متناسقة تعطي مظهرًا راقيًا ومهيبًا في الصور والاستقبال.',
+        sizes: '40 - 62',
+        colors: 'سكري / أسود',
+        occasion: 'استقبال رسمي',
+        status: 'متوفر',
+        mainImage: 'assets/adult-28.jpg',
+        gallery: ['assets/adult-28.jpg','assets/adult-28-side.jpg','assets/adult-28-back.jpg','assets/adult-28-detail.jpg']
+      },
+      {
+        id: 'adult-29',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 29',
+        desc: 'بدلة مناسبة لحفلات الزفاف والخطوبة مع لمسة فخامة واضحة.',
+        sizes: '40 - 62',
+        colors: 'أسود / أوف وايت / كحلي',
+        occasion: 'أعراس ومناسبات رسمية',
+        status: 'متوفر',
+        mainImage: 'assets/adult-29.jpg',
+        gallery: ['assets/adult-29.jpg','assets/adult-29-side.jpg','assets/adult-29-back.jpg','assets/adult-29-detail.jpg']
+      },
+      {
+        id: 'adult-30',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 30',
+        desc: 'خياطة أنيقة ومظهر رسمي يبرز الوقار والتميز في المناسبات.',
+        sizes: '40 - 62',
+        colors: 'أسود / رمادي داكن',
+        occasion: 'أعراس وخطوبة',
+        status: 'حسب الموعد',
+        mainImage: 'assets/adult-30.jpg',
+        gallery: ['assets/adult-30.jpg','assets/adult-30-side.jpg','assets/adult-30-back.jpg','assets/adult-30-detail.jpg']
+      },
+      {
+        id: 'adult-31',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 31',
+        desc: 'موديل فاخر لمحبي الإطلالات الكلاسيكية النظيفة.',
+        sizes: '40 - 62',
+        colors: 'كحلي / أسود',
+        occasion: 'سهرات وأفراح',
+        status: 'متوفر',
+        mainImage: 'assets/adult-31.jpg',
+        gallery: ['assets/adult-31.jpg','assets/adult-31-side.jpg','assets/adult-31-back.jpg','assets/adult-31-detail.jpg']
+      },
+      {
+        id: 'adult-32',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 32',
+        desc: 'إطلالة رسمية جذابة بتفاصيل محسوبة ولمسة مغربية راقية.',
+        sizes: '40 - 62',
+        colors: 'سكري / أسود',
+        occasion: 'استقبال رسمي',
+        status: 'متوفر',
+        mainImage: 'assets/adult-32.jpg',
+        gallery: ['assets/adult-32.jpg','assets/adult-32-side.jpg','assets/adult-32-back.jpg','assets/adult-32-detail.jpg']
+      },
+      {
+        id: 'adult-33',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 33',
+        desc: 'موديل رسمي بخطوط نظيفة ووقفة فاخرة يناسب الأعراس والمناسبات الرسمية.',
+        sizes: '40 - 62',
+        colors: 'أسود / أوف وايت / كحلي',
+        occasion: 'أعراس ومناسبات رسمية',
+        status: 'حسب الموعد',
+        mainImage: 'assets/adult-33.jpg',
+        gallery: ['assets/adult-33.jpg','assets/adult-33-side.jpg','assets/adult-33-back.jpg','assets/adult-33-detail.jpg']
+      },
+      {
+        id: 'adult-34',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 34',
+        desc: 'تصميم كلاسيكي يمنح حضورًا أنيقًا ومتوازنًا في المناسبات الكبيرة.',
+        sizes: '40 - 62',
+        colors: 'أسود / رمادي داكن',
+        occasion: 'أعراس وخطوبة',
+        status: 'متوفر',
+        mainImage: 'assets/adult-34.jpg',
+        gallery: ['assets/adult-34.jpg','assets/adult-34-side.jpg','assets/adult-34-back.jpg','assets/adult-34-detail.jpg']
+      },
+      {
+        id: 'adult-35',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 35',
+        desc: 'موديل أكثر جرأة بلمسة شبابية راقية للسهرات الراقية والأفراح.',
+        sizes: '40 - 62',
+        colors: 'كحلي / أسود',
+        occasion: 'سهرات وأفراح',
+        status: 'متوفر',
+        mainImage: 'assets/adult-35.jpg',
+        gallery: ['assets/adult-35.jpg','assets/adult-35-side.jpg','assets/adult-35-back.jpg','assets/adult-35-detail.jpg']
+      },
+      {
+        id: 'adult-36',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 36',
+        desc: 'قصة متناسقة تعطي مظهرًا راقيًا ومهيبًا في الصور والاستقبال.',
+        sizes: '40 - 62',
+        colors: 'سكري / أسود',
+        occasion: 'استقبال رسمي',
+        status: 'حسب الموعد',
+        mainImage: 'assets/adult-36.jpg',
+        gallery: ['assets/adult-36.jpg','assets/adult-36-side.jpg','assets/adult-36-back.jpg','assets/adult-36-detail.jpg']
+      },
+      {
+        id: 'adult-37',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 37',
+        desc: 'بدلة مناسبة لحفلات الزفاف والخطوبة مع لمسة فخامة واضحة.',
+        sizes: '40 - 62',
+        colors: 'أسود / أوف وايت / كحلي',
+        occasion: 'أعراس ومناسبات رسمية',
+        status: 'متوفر',
+        mainImage: 'assets/adult-37.jpg',
+        gallery: ['assets/adult-37.jpg','assets/adult-37-side.jpg','assets/adult-37-back.jpg','assets/adult-37-detail.jpg']
+      },
+      {
+        id: 'adult-38',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 38',
+        desc: 'خياطة أنيقة ومظهر رسمي يبرز الوقار والتميز في المناسبات.',
+        sizes: '40 - 62',
+        colors: 'أسود / رمادي داكن',
+        occasion: 'أعراس وخطوبة',
+        status: 'متوفر',
+        mainImage: 'assets/adult-38.jpg',
+        gallery: ['assets/adult-38.jpg','assets/adult-38-side.jpg','assets/adult-38-back.jpg','assets/adult-38-detail.jpg']
+      },
+      {
+        id: 'adult-39',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 39',
+        desc: 'موديل فاخر لمحبي الإطلالات الكلاسيكية النظيفة.',
+        sizes: '40 - 62',
+        colors: 'كحلي / أسود',
+        occasion: 'سهرات وأفراح',
+        status: 'حسب الموعد',
+        mainImage: 'assets/adult-39.jpg',
+        gallery: ['assets/adult-39.jpg','assets/adult-39-side.jpg','assets/adult-39-back.jpg','assets/adult-39-detail.jpg']
+      },
+      {
+        id: 'adult-40',
+        category: 'adult',
+        tag: 'كبار',
+        title: 'بدلة كبار 40',
+        desc: 'إطلالة رسمية جذابة بتفاصيل محسوبة ولمسة مغربية راقية.',
+        sizes: '40 - 62',
+        colors: 'سكري / أسود',
+        occasion: 'استقبال رسمي',
+        status: 'متوفر',
+        mainImage: 'assets/adult-40.jpg',
+        gallery: ['assets/adult-40.jpg','assets/adult-40-side.jpg','assets/adult-40-back.jpg','assets/adult-40-detail.jpg']
+      },
+      {
+        id: 'kid-1',
+        category: 'kid',
+        tag: 'أطفال',
+        title: 'بدلة أطفال 01',
+        desc: 'أناقة مريحة للصغار بمظهر مرتب مناسب للصور والمناسبات العائلية.',
+        sizes: '1 سنة - 11 سنة',
+        colors: 'أزرق / أبيض',
+        occasion: 'حفلات وأعراس',
+        status: 'متوفر',
+        mainImage: 'assets/kid-1.jpg',
+        gallery: ['assets/kid-1.jpg','assets/kid-1-side.jpg','assets/kid-1-back.jpg','assets/kid-1-detail.jpg']
+      },
+      {
+        id: 'kid-2',
+        category: 'kid',
+        tag: 'أطفال',
+        title: 'بدلة أطفال 02',
+        desc: 'بذلة صغيرة بلمسة راقية ومريحة للمناسبات الرسمية العائلية.',
+        sizes: '1 سنة - 11 سنة',
+        colors: 'بيج / أسود',
+        occasion: 'مناسبات عائلية',
+        status: 'متوفر',
+        mainImage: 'assets/kid-2.jpg',
+        gallery: ['assets/kid-2.jpg','assets/kid-2-side.jpg','assets/kid-2-back.jpg','assets/kid-2-detail.jpg']
+      },
+      {
+        id: 'kid-3',
+        category: 'kid',
+        tag: 'أطفال',
+        title: 'بدلة أطفال 03',
+        desc: 'موديل أطفال أنيق يبرز جمال الإطلالة في الحفلات والصور.',
+        sizes: '1 سنة - 11 سنة',
+        colors: 'كحلي / أبيض',
+        occasion: 'أفراح وصور',
+        status: 'حسب الموعد',
+        mainImage: 'assets/kid-3.jpg',
+        gallery: ['assets/kid-3.jpg','assets/kid-3-side.jpg','assets/kid-3-back.jpg','assets/kid-3-detail.jpg']
+      },
+      {
+        id: 'kid-4',
+        category: 'kid',
+        tag: 'أطفال',
+        title: 'بدلة أطفال 04',
+        desc: 'قصة مريحة للصغار مع مظهر شيك ومرتب للمناسبات.',
+        sizes: '1 سنة - 11 سنة',
+        colors: 'رمادي / أبيض',
+        occasion: 'حفلات خاصة',
+        status: 'متوفر',
+        mainImage: 'assets/kid-4.jpg',
+        gallery: ['assets/kid-4.jpg','assets/kid-4-side.jpg','assets/kid-4-back.jpg','assets/kid-4-detail.jpg']
+      },
+      {
+        id: 'kid-5',
+        category: 'kid',
+        tag: 'أطفال',
+        title: 'بدلة أطفال 05',
+        desc: 'أناقة مريحة للصغار بمظهر مرتب مناسب للصور والمناسبات العائلية.',
+        sizes: '1 سنة - 11 سنة',
+        colors: 'أزرق / أبيض',
+        occasion: 'حفلات وأعراس',
+        status: 'متوفر',
+        mainImage: 'assets/kid-5.jpg',
+        gallery: ['assets/kid-5.jpg','assets/kid-5-side.jpg','assets/kid-5-back.jpg','assets/kid-5-detail.jpg']
+      },
+      {
+        id: 'kid-6',
+        category: 'kid',
+        tag: 'أطفال',
+        title: 'بدلة أطفال 06',
+        desc: 'بذلة صغيرة بلمسة راقية ومريحة للمناسبات الرسمية العائلية.',
+        sizes: '1 سنة - 11 سنة',
+        colors: 'بيج / أسود',
+        occasion: 'مناسبات عائلية',
+        status: 'حسب الموعد',
+        mainImage: 'assets/kid-6.jpg',
+        gallery: ['assets/kid-6.jpg','assets/kid-6-side.jpg','assets/kid-6-back.jpg','assets/kid-6-detail.jpg']
+      },
+      {
+        id: 'kid-7',
+        category: 'kid',
+        tag: 'أطفال',
+        title: 'بدلة أطفال 07',
+        desc: 'موديل أطفال أنيق يبرز جمال الإطلالة في الحفلات والصور.',
+        sizes: '1 سنة - 11 سنة',
+        colors: 'كحلي / أبيض',
+        occasion: 'أفراح وصور',
+        status: 'متوفر',
+        mainImage: 'assets/kid-7.jpg',
+        gallery: ['assets/kid-7.jpg','assets/kid-7-side.jpg','assets/kid-7-back.jpg','assets/kid-7-detail.jpg']
+      },
+      {
+        id: 'kid-8',
+        category: 'kid',
+        tag: 'أطفال',
+        title: 'بدلة أطفال 08',
+        desc: 'قصة مريحة للصغار مع مظهر شيك ومرتب للمناسبات.',
+        sizes: '1 سنة - 11 سنة',
+        colors: 'رمادي / أبيض',
+        occasion: 'حفلات خاصة',
+        status: 'متوفر',
+        mainImage: 'assets/kid-8.jpg',
+        gallery: ['assets/kid-8.jpg','assets/kid-8-side.jpg','assets/kid-8-back.jpg','assets/kid-8-detail.jpg']
+      },
+      {
+        id: 'kid-9',
+        category: 'kid',
+        tag: 'أطفال',
+        title: 'بدلة أطفال 09',
+        desc: 'أناقة مريحة للصغار بمظهر مرتب مناسب للصور والمناسبات العائلية.',
+        sizes: '1 سنة - 11 سنة',
+        colors: 'أزرق / أبيض',
+        occasion: 'حفلات وأعراس',
+        status: 'حسب الموعد',
+        mainImage: 'assets/kid-9.jpg',
+        gallery: ['assets/kid-9.jpg','assets/kid-9-side.jpg','assets/kid-9-back.jpg','assets/kid-9-detail.jpg']
+      },
+      {
+        id: 'kid-10',
+        category: 'kid',
+        tag: 'أطفال',
+        title: 'بدلة أطفال 10',
+        desc: 'بذلة صغيرة بلمسة راقية ومريحة للمناسبات الرسمية العائلية.',
+        sizes: '1 سنة - 11 سنة',
+        colors: 'بيج / أسود',
+        occasion: 'مناسبات عائلية',
+        status: 'متوفر',
+        mainImage: 'assets/kid-10.jpg',
+        gallery: ['assets/kid-10.jpg','assets/kid-10-side.jpg','assets/kid-10-back.jpg','assets/kid-10-detail.jpg']
+      },
+      {
+        id: 'kid-11',
+        category: 'kid',
+        tag: 'أطفال',
+        title: 'بدلة أطفال 11',
+        desc: 'موديل أطفال أنيق يبرز جمال الإطلالة في الحفلات والصور.',
+        sizes: '1 سنة - 11 سنة',
+        colors: 'كحلي / أبيض',
+        occasion: 'أفراح وصور',
+        status: 'متوفر',
+        mainImage: 'assets/kid-11.jpg',
+        gallery: ['assets/kid-11.jpg','assets/kid-11-side.jpg','assets/kid-11-back.jpg','assets/kid-11-detail.jpg']
+      },
+      {
+        id: 'kid-12',
+        category: 'kid',
+        tag: 'أطفال',
+        title: 'بدلة أطفال 12',
+        desc: 'قصة مريحة للصغار مع مظهر شيك ومرتب للمناسبات.',
+        sizes: '1 سنة - 11 سنة',
+        colors: 'رمادي / أبيض',
+        occasion: 'حفلات خاصة',
+        status: 'حسب الموعد',
+        mainImage: 'assets/kid-12.jpg',
+        gallery: ['assets/kid-12.jpg','assets/kid-12-side.jpg','assets/kid-12-back.jpg','assets/kid-12-detail.jpg']
+      },
+      {
+        id: 'kid-13',
+        category: 'kid',
+        tag: 'أطفال',
+        title: 'بدلة أطفال 13',
+        desc: 'أناقة مريحة للصغار بمظهر مرتب مناسب للصور والمناسبات العائلية.',
+        sizes: '1 سنة - 11 سنة',
+        colors: 'أزرق / أبيض',
+        occasion: 'حفلات وأعراس',
+        status: 'متوفر',
+        mainImage: 'assets/kid-13.jpg',
+        gallery: ['assets/kid-13.jpg','assets/kid-13-side.jpg','assets/kid-13-back.jpg','assets/kid-13-detail.jpg']
+      },
+      {
+        id: 'kid-14',
+        category: 'kid',
+        tag: 'أطفال',
+        title: 'بدلة أطفال 14',
+        desc: 'بذلة صغيرة بلمسة راقية ومريحة للمناسبات الرسمية العائلية.',
+        sizes: '1 سنة - 11 سنة',
+        colors: 'بيج / أسود',
+        occasion: 'مناسبات عائلية',
+        status: 'متوفر',
+        mainImage: 'assets/kid-14.jpg',
+        gallery: ['assets/kid-14.jpg','assets/kid-14-side.jpg','assets/kid-14-back.jpg','assets/kid-14-detail.jpg']
+      },
+      {
+        id: 'kid-15',
+        category: 'kid',
+        tag: 'أطفال',
+        title: 'بدلة أطفال 15',
+        desc: 'موديل أطفال أنيق يبرز جمال الإطلالة في الحفلات والصور.',
+        sizes: '1 سنة - 11 سنة',
+        colors: 'كحلي / أبيض',
+        occasion: 'أفراح وصور',
+        status: 'حسب الموعد',
+        mainImage: 'assets/kid-15.jpg',
+        gallery: ['assets/kid-15.jpg','assets/kid-15-side.jpg','assets/kid-15-back.jpg','assets/kid-15-detail.jpg']
+      },
+      {
+        id: 'kid-16',
+        category: 'kid',
+        tag: 'أطفال',
+        title: 'بدلة أطفال 16',
+        desc: 'قصة مريحة للصغار مع مظهر شيك ومرتب للمناسبات.',
+        sizes: '1 سنة - 11 سنة',
+        colors: 'رمادي / أبيض',
+        occasion: 'حفلات خاصة',
+        status: 'متوفر',
+        mainImage: 'assets/kid-16.jpg',
+        gallery: ['assets/kid-16.jpg','assets/kid-16-side.jpg','assets/kid-16-back.jpg','assets/kid-16-detail.jpg']
+      },
+      {
+        id: 'kid-17',
+        category: 'kid',
+        tag: 'أطفال',
+        title: 'بدلة أطفال 17',
+        desc: 'أناقة مريحة للصغار بمظهر مرتب مناسب للصور والمناسبات العائلية.',
+        sizes: '1 سنة - 11 سنة',
+        colors: 'أزرق / أبيض',
+        occasion: 'حفلات وأعراس',
+        status: 'متوفر',
+        mainImage: 'assets/kid-17.jpg',
+        gallery: ['assets/kid-17.jpg','assets/kid-17-side.jpg','assets/kid-17-back.jpg','assets/kid-17-detail.jpg']
+      },
+      {
+        id: 'kid-18',
+        category: 'kid',
+        tag: 'أطفال',
+        title: 'بدلة أطفال 18',
+        desc: 'بذلة صغيرة بلمسة راقية ومريحة للمناسبات الرسمية العائلية.',
+        sizes: '1 سنة - 11 سنة',
+        colors: 'بيج / أسود',
+        occasion: 'مناسبات عائلية',
+        status: 'حسب الموعد',
+        mainImage: 'assets/kid-18.jpg',
+        gallery: ['assets/kid-18.jpg','assets/kid-18-side.jpg','assets/kid-18-back.jpg','assets/kid-18-detail.jpg']
+      },
+      {
+        id: 'kid-19',
+        category: 'kid',
+        tag: 'أطفال',
+        title: 'بدلة أطفال 19',
+        desc: 'موديل أطفال أنيق يبرز جمال الإطلالة في الحفلات والصور.',
+        sizes: '1 سنة - 11 سنة',
+        colors: 'كحلي / أبيض',
+        occasion: 'أفراح وصور',
+        status: 'متوفر',
+        mainImage: 'assets/kid-19.jpg',
+        gallery: ['assets/kid-19.jpg','assets/kid-19-side.jpg','assets/kid-19-back.jpg','assets/kid-19-detail.jpg']
+      },
+      {
+        id: 'kid-20',
+        category: 'kid',
+        tag: 'أطفال',
+        title: 'بدلة أطفال 20',
+        desc: 'قصة مريحة للصغار مع مظهر شيك ومرتب للمناسبات.',
+        sizes: '1 سنة - 11 سنة',
+        colors: 'رمادي / أبيض',
+        occasion: 'حفلات خاصة',
+        status: 'متوفر',
+        mainImage: 'assets/kid-20.jpg',
+        gallery: ['assets/kid-20.jpg','assets/kid-20-side.jpg','assets/kid-20-back.jpg','assets/kid-20-detail.jpg']
+      },
+      {
+        id: 'shoe-1',
+        category: 'shoe',
+        tag: 'أحذية',
+        title: 'حذاء كلاسيكي 01',
+        desc: 'حذاء رسمي ينسجم مع البذلات ويكمل الإطلالة النهائية بأناقة.',
+        sizes: '23 - 44',
+        colors: 'أسود / بني',
+        occasion: 'إكمال الإطلالة',
+        status: 'متوفر',
+        mainImage: 'assets/shoe-1.jpg',
+        gallery: ['assets/shoe-1.jpg','assets/shoe-1-side.jpg','assets/shoe-1-back.jpg','assets/shoe-1-detail.jpg']
+      },
+      {
+        id: 'shirt-1',
+        category: 'shirt',
+        tag: 'قمصان',
+        title: 'قميص رسمي 01',
+        desc: 'قميص ناعم بقصة متوازنة يناسب البذلات الرسمية والبلدي الفاخر.',
+        sizes: 'XS - 6XL',
+        colors: 'أبيض / سكري',
+        occasion: 'مناسبات رسمية',
+        status: 'متوفر',
+        mainImage: 'assets/shirt-1.jpg',
+        gallery: ['assets/shirt-1.jpg','assets/shirt-1-side.jpg','assets/shirt-1-back.jpg','assets/shirt-1-detail.jpg']
+      },
+      {
+        id: 'baladi-1',
+        category: 'baladi',
+        tag: 'بلدي',
+        title: 'بلدي ملكي 01',
+        desc: 'موديل بلدي فاخر بطابع مغربي تقليدي مع بياض ناصع وتفاصيل ذهبية ملكية.',
+        sizes: 'S - M - L - XL - XXL - XXXL',
+        colors: 'أبيض / ذهبي ملكي / أصفر فاقع',
+        occasion: 'عرس مغربي',
+        status: 'متوفر',
+        mainImage: 'assets/baladi-1-front.jpg',
+        gallery: ['assets/baladi-1-front.jpg','assets/baladi-1-side.jpg','assets/baladi-1-back.jpg','assets/baladi-1-detail.jpg']
+      },
+      {
+        id: 'baladi-2',
+        category: 'baladi',
+        tag: 'بلدي',
+        title: 'بلدي ملكي 02',
+        desc: 'تفاصيل مغربية راقية وإشراقة ذهبية ملفتة للمناسبات الفاخرة.',
+        sizes: 'S - M - L - XL - XXL - XXXL',
+        colors: 'أبيض / ذهبي ملكي / أصفر فاقع',
+        occasion: 'زفاف وتقليد',
+        status: 'متوفر',
+        mainImage: 'assets/baladi-2-front.jpg',
+        gallery: ['assets/baladi-2-front.jpg','assets/baladi-2-side.jpg','assets/baladi-2-back.jpg','assets/baladi-2-detail.jpg']
+      },
+      {
+        id: 'baladi-3',
+        category: 'baladi',
+        tag: 'بلدي',
+        title: 'بلدي ملكي 03',
+        desc: 'موديل تقليدي بلمسة عصرية مهيبة ومظهر احتفالي متوازن.',
+        sizes: 'S - M - L - XL - XXL - XXXL',
+        colors: 'أبيض / ذهبي ملكي / أصفر فاقع',
+        occasion: 'حفلة العرس',
+        status: 'حسب الموعد',
+        mainImage: 'assets/baladi-3-front.jpg',
+        gallery: ['assets/baladi-3-front.jpg','assets/baladi-3-side.jpg','assets/baladi-3-back.jpg','assets/baladi-3-detail.jpg']
+      },
+      {
+        id: 'baladi-4',
+        category: 'baladi',
+        tag: 'بلدي',
+        title: 'بلدي ملكي 04',
+        desc: 'حضور قوي في الصور مع تفاصيل ذهبية بارزة ونقاء في اللون الأبيض.',
+        sizes: 'S - M - L - XL - XXL - XXXL',
+        colors: 'أبيض / ذهبي ملكي / أصفر فاقع',
+        occasion: 'موكب العرس',
+        status: 'متوفر',
+        mainImage: 'assets/baladi-4-front.jpg',
+        gallery: ['assets/baladi-4-front.jpg','assets/baladi-4-side.jpg','assets/baladi-4-back.jpg','assets/baladi-4-detail.jpg']
+      },
+      {
+        id: 'baladi-5',
+        category: 'baladi',
+        tag: 'بلدي',
+        title: 'بلدي ملكي 05',
+        desc: 'قصة احتفالية أنيقة تناسب الأعراس والعقيقة والاحتفالات الخاصة.',
+        sizes: 'S - M - L - XL - XXL - XXXL',
+        colors: 'أبيض / ذهبي ملكي / أصفر فاقع',
+        occasion: 'ليلة الحناء',
+        status: 'متوفر',
+        mainImage: 'assets/baladi-5-front.jpg',
+        gallery: ['assets/baladi-5-front.jpg','assets/baladi-5-side.jpg','assets/baladi-5-back.jpg','assets/baladi-5-detail.jpg']
+      },
+      {
+        id: 'baladi-6',
+        category: 'baladi',
+        tag: 'بلدي',
+        title: 'بلدي ملكي 06',
+        desc: 'إشراقة أكثر قوة مع لمسة ملكية تناسب الليالي الاحتفالية المغربية.',
+        sizes: 'S - M - L - XL - XXL - XXXL',
+        colors: 'أبيض / ذهبي ملكي / أصفر فاقع',
+        occasion: 'استقبال فاخر',
+        status: 'حسب الموعد',
+        mainImage: 'assets/baladi-6-front.jpg',
+        gallery: ['assets/baladi-6-front.jpg','assets/baladi-6-side.jpg','assets/baladi-6-back.jpg','assets/baladi-6-detail.jpg']
+      },
+      {
+        id: 'baladi-7',
+        category: 'baladi',
+        tag: 'بلدي',
+        title: 'بلدي ملكي 07',
+        desc: 'موديل بلدي فاخر بطابع مغربي تقليدي مع بياض ناصع وتفاصيل ذهبية ملكية.',
+        sizes: 'S - M - L - XL - XXL - XXXL',
+        colors: 'أبيض / ذهبي ملكي / أصفر فاقع',
+        occasion: 'عرس مغربي',
+        status: 'متوفر',
+        mainImage: 'assets/baladi-7-front.jpg',
+        gallery: ['assets/baladi-7-front.jpg','assets/baladi-7-side.jpg','assets/baladi-7-back.jpg','assets/baladi-7-detail.jpg']
+      },
+      {
+        id: 'baladi-8',
+        category: 'baladi',
+        tag: 'بلدي',
+        title: 'بلدي ملكي 08',
+        desc: 'تفاصيل مغربية راقية وإشراقة ذهبية ملفتة للمناسبات الفاخرة.',
+        sizes: 'S - M - L - XL - XXL - XXXL',
+        colors: 'أبيض / ذهبي ملكي / أصفر فاقع',
+        occasion: 'زفاف وتقليد',
+        status: 'متوفر',
+        mainImage: 'assets/baladi-8-front.jpg',
+        gallery: ['assets/baladi-8-front.jpg','assets/baladi-8-side.jpg','assets/baladi-8-back.jpg','assets/baladi-8-detail.jpg']
+      },
+      {
+        id: 'baladi-9',
+        category: 'baladi',
+        tag: 'بلدي',
+        title: 'بلدي ملكي 09',
+        desc: 'موديل تقليدي بلمسة عصرية مهيبة ومظهر احتفالي متوازن.',
+        sizes: 'S - M - L - XL - XXL - XXXL',
+        colors: 'أبيض / ذهبي ملكي / أصفر فاقع',
+        occasion: 'حفلة العرس',
+        status: 'حسب الموعد',
+        mainImage: 'assets/baladi-9-front.jpg',
+        gallery: ['assets/baladi-9-front.jpg','assets/baladi-9-side.jpg','assets/baladi-9-back.jpg','assets/baladi-9-detail.jpg']
+      },
+      {
+        id: 'baladi-10',
+        category: 'baladi',
+        tag: 'بلدي',
+        title: 'بلدي ملكي 10',
+        desc: 'حضور قوي في الصور مع تفاصيل ذهبية بارزة ونقاء في اللون الأبيض.',
+        sizes: 'S - M - L - XL - XXL - XXXL',
+        colors: 'أبيض / ذهبي ملكي / أصفر فاقع',
+        occasion: 'موكب العرس',
+        status: 'متوفر',
+        mainImage: 'assets/baladi-10-front.jpg',
+        gallery: ['assets/baladi-10-front.jpg','assets/baladi-10-side.jpg','assets/baladi-10-back.jpg','assets/baladi-10-detail.jpg']
+      },
+      {
+        id: 'baladi-11',
+        category: 'baladi',
+        tag: 'بلدي',
+        title: 'بلدي ملكي 11',
+        desc: 'قصة احتفالية أنيقة تناسب الأعراس والعقيقة والاحتفالات الخاصة.',
+        sizes: 'S - M - L - XL - XXL - XXXL',
+        colors: 'أبيض / ذهبي ملكي / أصفر فاقع',
+        occasion: 'ليلة الحناء',
+        status: 'متوفر',
+        mainImage: 'assets/baladi-11-front.jpg',
+        gallery: ['assets/baladi-11-front.jpg','assets/baladi-11-side.jpg','assets/baladi-11-back.jpg','assets/baladi-11-detail.jpg']
+      },
+      {
+        id: 'baladi-12',
+        category: 'baladi',
+        tag: 'بلدي',
+        title: 'بلدي ملكي 12',
+        desc: 'إشراقة أكثر قوة مع لمسة ملكية تناسب الليالي الاحتفالية المغربية.',
+        sizes: 'S - M - L - XL - XXL - XXXL',
+        colors: 'أبيض / ذهبي ملكي / أصفر فاقع',
+        occasion: 'استقبال فاخر',
+        status: 'حسب الموعد',
+        mainImage: 'assets/baladi-12-front.jpg',
+        gallery: ['assets/baladi-12-front.jpg','assets/baladi-12-side.jpg','assets/baladi-12-back.jpg','assets/baladi-12-detail.jpg']
+      },
+      {
+        id: 'baladi-13',
+        category: 'baladi',
+        tag: 'بلدي',
+        title: 'بلدي ملكي 13',
+        desc: 'موديل بلدي فاخر بطابع مغربي تقليدي مع بياض ناصع وتفاصيل ذهبية ملكية.',
+        sizes: 'S - M - L - XL - XXL - XXXL',
+        colors: 'أبيض / ذهبي ملكي / أصفر فاقع',
+        occasion: 'عرس مغربي',
+        status: 'متوفر',
+        mainImage: 'assets/baladi-13-front.jpg',
+        gallery: ['assets/baladi-13-front.jpg','assets/baladi-13-side.jpg','assets/baladi-13-back.jpg','assets/baladi-13-detail.jpg']
+      },
+      {
+        id: 'baladi-14',
+        category: 'baladi',
+        tag: 'بلدي',
+        title: 'بلدي ملكي 14',
+        desc: 'تفاصيل مغربية راقية وإشراقة ذهبية ملفتة للمناسبات الفاخرة.',
+        sizes: 'S - M - L - XL - XXL - XXXL',
+        colors: 'أبيض / ذهبي ملكي / أصفر فاقع',
+        occasion: 'زفاف وتقليد',
+        status: 'متوفر',
+        mainImage: 'assets/baladi-14-front.jpg',
+        gallery: ['assets/baladi-14-front.jpg','assets/baladi-14-side.jpg','assets/baladi-14-back.jpg','assets/baladi-14-detail.jpg']
+      },
+      {
+        id: 'baladi-15',
+        category: 'baladi',
+        tag: 'بلدي',
+        title: 'بلدي ملكي 15',
+        desc: 'موديل تقليدي بلمسة عصرية مهيبة ومظهر احتفالي متوازن.',
+        sizes: 'S - M - L - XL - XXL - XXXL',
+        colors: 'أبيض / ذهبي ملكي / أصفر فاقع',
+        occasion: 'حفلة العرس',
+        status: 'حسب الموعد',
+        mainImage: 'assets/baladi-15-front.jpg',
+        gallery: ['assets/baladi-15-front.jpg','assets/baladi-15-side.jpg','assets/baladi-15-back.jpg','assets/baladi-15-detail.jpg']
+      }
+    ];
+
+    const productsGrid = document.getElementById('productsGrid');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const modal = document.getElementById('productModal');
+    const modalOverlay = document.getElementById('modalOverlay');
+    const modalClose = document.getElementById('modalClose');
+    const modalCloseAlt = document.getElementById('modalCloseAlt');
+    const modalMainImage = document.getElementById('modalMainImage');
+    const modalThumbs = document.getElementById('modalThumbs');
+    const modalTag = document.getElementById('modalTag');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalSizes = document.getElementById('modalSizes');
+    const modalColors = document.getElementById('modalColors');
+    const modalOccasion = document.getElementById('modalOccasion');
+    const modalStatus = document.getElementById('modalStatus');
+    const bookThisModel = document.getElementById('bookThisModel');
+    const bookingForm = document.getElementById('bookingForm');
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const themeBtn = document.getElementById('themeBtn');
+    let activeProduct = null;
+
+    function imageTag(src, alt) {
+      return `<img src="${src}" alt="${alt}" loading="lazy" onerror="this.onerror=null;this.src='assets/logo.jpg'">`;
+    }
+
+    function renderProducts(filter = 'all') {
+      const visibleProducts = filter === 'all' ? products : products.filter(product => product.category === filter);
+      productsGrid.innerHTML = visibleProducts.map(product => `
+        <article class="product-card reveal visible" data-category="${product.category}">
+          <div class="product-media">
+            ${imageTag(product.mainImage, product.title)}
+            <span class="product-badge">${product.tag}</span>
+          </div>
+          <div class="product-body">
+            <h3>${product.title}</h3>
+            <p>${product.desc}</p>
+            <div class="product-meta">
+              <div><strong>المقاسات</strong><span>${product.sizes}</span></div>
+              <div><strong>الألوان</strong><span>${product.colors}</span></div>
+            </div>
+            <div class="card-actions">
+              <button class="btn btn-primary open-modal" type="button" data-id="${product.id}">عرض التفاصيل</button>
+              <a class="btn btn-secondary" href="#booking">احجز الآن</a>
+            </div>
+          </div>
+        </article>
+      `).join('');
+
+      document.querySelectorAll('.open-modal').forEach(button => {
+        button.addEventListener('click', () => openModal(button.dataset.id));
+      });
+    }
+
+    function renderThumbs(gallery) {
+      modalThumbs.innerHTML = gallery.map((src, index) => `
+        <button class="thumb" type="button" data-src="${src}" aria-label="صورة ${index + 1}">
+          ${imageTag(src, `صورة ${index + 1}`)}
+        </button>
+      `).join('');
+      document.querySelectorAll('.thumb').forEach(thumb => {
+        thumb.addEventListener('click', () => {
+          modalMainImage.src = thumb.dataset.src;
+        });
+      });
+    }
+
+    function openModal(id) {
+      const product = products.find(item => item.id === id);
+      if (!product) return;
+      activeProduct = product;
+      modalTag.textContent = product.tag;
+      modalTitle.textContent = product.title;
+      modalDesc.textContent = product.desc;
+      modalSizes.textContent = product.sizes;
+      modalColors.textContent = product.colors;
+      modalOccasion.textContent = product.occasion;
+      modalStatus.textContent = product.status;
+      modalMainImage.src = product.gallery[0];
+      renderThumbs(product.gallery);
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        renderProducts(button.dataset.filter);
+      });
+    });
+
+    modalOverlay.addEventListener('click', closeModal);
+    modalClose.addEventListener('click', closeModal);
+    modalCloseAlt.addEventListener('click', closeModal);
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && modal.classList.contains('open')) closeModal();
+    });
+
+    bookThisModel.addEventListener('click', () => {
+      if (!activeProduct) return;
+      document.getElementById('requestType').value =
+        activeProduct.category === 'adult' ? 'بذلة كبار' :
+        activeProduct.category === 'kid' ? 'بذلة أطفال' :
+        activeProduct.category === 'shoe' ? 'حذاء' :
+        activeProduct.category === 'shirt' ? 'قميص' : 'بلدي';
+      document.getElementById('model').value = activeProduct.title;
+      document.getElementById('size').value = activeProduct.category === 'baladi' ? 'XL' : activeProduct.sizes.split(' - ')[0];
+      closeModal();
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    bookingForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const requestType = document.getElementById('requestType').value.trim();
+      const model = document.getElementById('model').value.trim();
+      const size = document.getElementById('size').value.trim();
+      const date = document.getElementById('date').value.trim();
+      const notes = document.getElementById('notes').value.trim();
+
+      const message = `السلام عليكم، بغيت نحجز من عند PERLE HOMME\nالاسم: ${name}\nالهاتف: ${phone}\nنوع الطلب: ${requestType}\nالموديل: ${model}\nالمقاس: ${size}\nتاريخ المناسبة: ${date}\nملاحظات: ${notes || 'لا توجد'}`;
+      const url = `https://wa.me/212700469429?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    });
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('show');
+    });
+
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.remove('show'));
+    });
+
+    let dark = false;
+    themeBtn.addEventListener('click', () => {
+      dark = !dark;
+      if (dark) {
+        document.documentElement.style.setProperty('--bg', '#211a14');
+        document.documentElement.style.setProperty('--surface', 'rgba(44, 34, 26, 0.88)');
+        document.documentElement.style.setProperty('--surface-strong', '#2b221a');
+        document.documentElement.style.setProperty('--card', '#30261d');
+        document.documentElement.style.setProperty('--text', '#f4eadb');
+        document.documentElement.style.setProperty('--muted', '#d2bfa6');
+        document.documentElement.style.setProperty('--line', 'rgba(232, 193, 126, 0.16)');
+        document.documentElement.style.setProperty('--gold', '#d7a53a');
+        document.documentElement.style.setProperty('--gold-strong', '#e0ab3f');
+        document.documentElement.style.setProperty('--yellow', '#f0c14b');
+        document.documentElement.style.setProperty('--card-bg', '#32281f');
+        document.documentElement.style.setProperty('--card-bg-2', '#2b221a');
+        document.documentElement.style.setProperty('--card-border', 'rgba(232,193,126,.14)');
+        document.documentElement.style.setProperty('--heading-color', '#f3e7d3');
+        document.documentElement.style.setProperty('--body-color', '#dcc9ad');
+        document.documentElement.style.setProperty('--label-color', '#e0ad3c');
+        document.documentElement.style.setProperty('--soft-btn-bg', '#f1e7d8');
+        document.documentElement.style.setProperty('--soft-btn-text', '#2f2418');
+        document.documentElement.style.setProperty('--topbar-bg', 'rgba(34, 27, 21, 0.94)');
+        document.documentElement.style.setProperty('--icon-bg', 'rgba(248, 240, 226, 0.10)');
+        document.documentElement.style.setProperty('--icon-color', '#f1c96b');
+        document.documentElement.style.setProperty('--pattern-line', 'rgba(232,193,126,.10)');
+        document.documentElement.style.setProperty('--pattern-dot', 'rgba(232,106,0,.10)');
+        document.documentElement.style.setProperty('--pattern-dot-2', 'rgba(56,183,177,.08)');
+        document.documentElement.style.setProperty('--hero-title-color', '#f4eadb');
+        document.documentElement.style.setProperty('--card-text-strong', '#f7efe4');
+        document.documentElement.style.setProperty('--card-text', '#eadbc8');
+        document.documentElement.style.setProperty('--field-bg', 'rgba(248,240,226,.08)');
+        document.documentElement.style.setProperty('--field-text', '#f5ecdf');
+        document.documentElement.style.setProperty('--field-label', '#f0c14b');
+        document.documentElement.style.setProperty('--field-border', 'rgba(232,193,126,.18)');
+        document.documentElement.style.setProperty('--modal-surface', '#2b221a');
+        document.documentElement.style.setProperty('--modal-text', '#eadbc8');
+        document.documentElement.style.setProperty('--modal-strong', '#f7efe4');
+        document.documentElement.style.setProperty('--chip-bg-strong', 'rgba(248,240,226,.10)');
+        document.documentElement.style.setProperty('--chip-text-strong', '#f4eadb');
+        document.body.style.background = 'radial-gradient(circle at top right, rgba(232,166,58,.10), transparent 20%), radial-gradient(circle at bottom left, rgba(215,165,58,.08), transparent 24%), linear-gradient(180deg, #241c15 0%, #1b1510 100%)';
+        themeBtn.textContent = '☀';
+      } else {
+        document.documentElement.style.removeProperty('--bg');
+        document.documentElement.style.removeProperty('--surface');
+        document.documentElement.style.removeProperty('--surface-strong');
+        document.documentElement.style.removeProperty('--card');
+        document.documentElement.style.removeProperty('--text');
+        document.documentElement.style.removeProperty('--muted');
+        document.documentElement.style.removeProperty('--line');
+        document.documentElement.style.removeProperty('--gold');
+        document.documentElement.style.removeProperty('--gold-strong');
+        document.documentElement.style.removeProperty('--yellow');
+        document.documentElement.style.removeProperty('--card-bg');
+        document.documentElement.style.removeProperty('--card-bg-2');
+        document.documentElement.style.removeProperty('--card-border');
+        document.documentElement.style.removeProperty('--heading-color');
+        document.documentElement.style.removeProperty('--body-color');
+        document.documentElement.style.removeProperty('--label-color');
+        document.documentElement.style.removeProperty('--soft-btn-bg');
+        document.documentElement.style.removeProperty('--soft-btn-text');
+        document.documentElement.style.removeProperty('--topbar-bg');
+        document.documentElement.style.removeProperty('--icon-bg');
+        document.documentElement.style.removeProperty('--icon-color');
+        document.documentElement.style.removeProperty('--pattern-line');
+        document.documentElement.style.removeProperty('--pattern-dot');
+        document.documentElement.style.removeProperty('--pattern-dot-2');
+        document.documentElement.style.removeProperty('--hero-title-color');
+        document.documentElement.style.removeProperty('--card-text-strong');
+        document.documentElement.style.removeProperty('--card-text');
+        document.documentElement.style.removeProperty('--field-bg');
+        document.documentElement.style.removeProperty('--field-text');
+        document.documentElement.style.removeProperty('--field-label');
+        document.documentElement.style.removeProperty('--field-border');
+        document.documentElement.style.removeProperty('--modal-surface');
+        document.documentElement.style.removeProperty('--modal-text');
+        document.documentElement.style.removeProperty('--modal-strong');
+        document.documentElement.style.removeProperty('--chip-bg-strong');
+        document.documentElement.style.removeProperty('--chip-text-strong');
+        document.body.style.background = 'radial-gradient(circle at top right, rgba(201,154,46,.15), transparent 22%), radial-gradient(circle at bottom left, rgba(245,196,0,.08), transparent 24%), linear-gradient(180deg, #fbf6ee 0%, #f5edde 100%)';
+        themeBtn.textContent = '☾';
+      }
+    });
+
+
+
+
+
+    document.querySelectorAll('.collection-card, .info-card, .product-card, .feature-card, article').forEach(card => {
+      const textContent = (card.textContent || '').replace(/\s+/g, ' ').trim();
+      if (textContent.includes('قسم البلدي')) {
+        card.classList.add('baladi-highlight');
+      }
+    });
+
+    document.querySelectorAll('.product-card').forEach((card, index) => {
+      const media = card.querySelector('.product-media');
+      const content = card.querySelector('.product-copy, .product-content, .product-body') || card;
+      if (content && !card.querySelector('.availability-chip')) {
+        const chip = document.createElement('div');
+        chip.className = 'availability-chip';
+        chip.textContent = index % 3 === 1 ? 'متوفر هذا الأسبوع' : 'متوفر للحجز';
+        content.prepend(chip);
+      }
+      if (content && !card.querySelector('.sizes-chip')) {
+        const wrap = document.createElement('div');
+        wrap.className = 'sizes-chip';
+        const sizes = ['40','42','44','46'];
+        sizes.forEach(size => {
+          const span = document.createElement('span');
+          span.textContent = size;
+          wrap.appendChild(span);
+        });
+        content.appendChild(wrap);
+      }
+      if (media) {
+        media.style.background = 'linear-gradient(160deg, rgba(255,255,255,.98), rgba(244,232,198,.90))';
+      }
+    });
+
+    document.querySelectorAll('.modal-panel, .modal-content, .detail-panel').forEach(panel => {
+      if (!panel.querySelector('.modal-sizes-box')) {
+        const sizesBox = document.createElement('div');
+        sizesBox.className = 'modal-sizes-box';
+        sizesBox.innerHTML = '<strong class="detail-label">اختيار المقاس</strong><div class="modal-sizes-wrap"><button type="button" class="modal-size-btn active">40</button><button type="button" class="modal-size-btn">42</button><button type="button" class="modal-size-btn">44</button><button type="button" class="modal-size-btn">46</button><button type="button" class="modal-size-btn">48</button></div>';
+        panel.appendChild(sizesBox);
+      }
+      if (!panel.querySelector('.modal-availability-box')) {
+        const availability = document.createElement('div');
+        availability.className = 'modal-availability-box';
+        availability.innerHTML = '<strong class="detail-label">التوفر</strong><p>متوفر مبدئيًا لهذا الأسبوع، ويتم التأكيد النهائي بعد اختيار التاريخ.</p>';
+        panel.appendChild(availability);
+      }
+      if (!panel.querySelector('.modal-policy-box')) {
+        const policy = document.createElement('div');
+        policy.className = 'modal-policy-box';
+        policy.innerHTML = '<strong class="detail-label">ملاحظة الكراء</strong><p>العربون يثبت الحجز، وأي تعديل في الموعد يفضل إبلاغ المحل به مسبقًا.</p>';
+        panel.appendChild(policy);
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('.modal-size-btn');
+      if (!btn) return;
+      const wrap = btn.closest('.modal-sizes-wrap');
+      wrap.querySelectorAll('.modal-size-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach(item => observer.observe(item));
+    renderProducts();
+  </script>
+</body>
+</html>
